@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8EF2D48661FF74C1EE94B44 /* Pods_MCSL_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */; };
+		C47603F0244CD18900A26EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */; };
 		C4E32406243A58730097C007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32405243A58730097C007 /* AppDelegate.swift */; };
 		C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32407243A58730097C007 /* SceneDelegate.swift */; };
 		C4E3240A243A58730097C007 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32409243A58730097C007 /* FirstViewController.swift */; };
@@ -14,9 +16,15 @@
 		C4E3240F243A58730097C007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E3240D243A58730097C007 /* Main.storyboard */; };
 		C4E32411243A587C0097C007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E32410243A587C0097C007 /* Assets.xcassets */; };
 		C4E32414243A587C0097C007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E32412243A587C0097C007 /* LaunchScreen.storyboard */; };
+		C4E3241C243A5F730097C007 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3241B243A5F730097C007 /* FavoritesTableViewController.swift */; };
+		C4E3241E243A654B0097C007 /* Swimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3241D243A654B0097C007 /* Swimmer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22FF5EDB6AB563EDB84BB568 /* Pods-MCSL Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.debug.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.release.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.release.xcconfig"; sourceTree = "<group>"; };
+		B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCSL_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4E32402243A58730097C007 /* MCSL Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MCSL Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E32405243A58730097C007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E32407243A58730097C007 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +34,8 @@
 		C4E32410243A587C0097C007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4E32413243A587C0097C007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4E32415243A587C0097C007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4E3241B243A5F730097C007 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		C4E3241D243A654B0097C007 /* Swimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swimmer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EF2D48661FF74C1EE94B44 /* Pods_MCSL_Mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB3C177626B13A75FF81AD7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA0437AC42F287D52348F25F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22FF5EDB6AB563EDB84BB568 /* Pods-MCSL Mobile.debug.xcconfig */,
+				A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C4E323F9243A58730097C007 = {
 			isa = PBXGroup;
 			children = (
 				C4E32404243A58730097C007 /* MCSL Mobile */,
 				C4E32403243A58730097C007 /* Products */,
+				BA0437AC42F287D52348F25F /* Pods */,
+				AB3C177626B13A75FF81AD7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,9 +94,12 @@
 				C4E32409243A58730097C007 /* FirstViewController.swift */,
 				C4E3240B243A58730097C007 /* SecondViewController.swift */,
 				C4E3240D243A58730097C007 /* Main.storyboard */,
+				C4E3241D243A654B0097C007 /* Swimmer.swift */,
+				C4E3241B243A5F730097C007 /* FavoritesTableViewController.swift */,
 				C4E32410243A587C0097C007 /* Assets.xcassets */,
 				C4E32412243A587C0097C007 /* LaunchScreen.storyboard */,
 				C4E32415243A587C0097C007 /* Info.plist */,
+				C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */,
 			);
 			path = "MCSL Mobile";
 			sourceTree = "<group>";
@@ -77,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E32418243A587C0097C007 /* Build configuration list for PBXNativeTarget "MCSL Mobile" */;
 			buildPhases = (
+				C78CC7CBF8DBB832BE87C959 /* [CP] Check Pods Manifest.lock */,
 				C4E323FE243A58730097C007 /* Sources */,
 				C4E323FF243A58730097C007 /* Frameworks */,
 				C4E32400243A58730097C007 /* Resources */,
+				DF3F2CF1290EC5CD3DDF5E82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,12 +165,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E32414243A587C0097C007 /* LaunchScreen.storyboard in Resources */,
+				C47603F0244CD18900A26EB9 /* GoogleService-Info.plist in Resources */,
 				C4E32411243A587C0097C007 /* Assets.xcassets in Resources */,
 				C4E3240F243A58730097C007 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C78CC7CBF8DBB832BE87C959 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MCSL Mobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3F2CF1290EC5CD3DDF5E82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4E323FE243A58730097C007 /* Sources */ = {
@@ -143,8 +222,10 @@
 			files = (
 				C4E3240C243A58730097C007 /* SecondViewController.swift in Sources */,
 				C4E3240A243A58730097C007 /* FirstViewController.swift in Sources */,
+				C4E3241E243A654B0097C007 /* Swimmer.swift in Sources */,
 				C4E32406243A58730097C007 /* AppDelegate.swift in Sources */,
 				C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */,
+				C4E3241C243A5F730097C007 /* FavoritesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +367,7 @@
 		};
 		C4E32419243A587C0097C007 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22FF5EDB6AB563EDB84BB568 /* Pods-MCSL Mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +386,7 @@
 		};
 		C4E3241A243A587C0097C007 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
