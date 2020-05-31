@@ -20,10 +20,12 @@ class HomeTableViewController: UITableViewController {
             let values = snapshot.value as? [
                 String: [String: AnyObject]
             ] ?? [:]
-            self.divisions.removeAll()
-            self.teams.removeAll()
+            self.divisions.removeAll(keepingCapacity: true)
+            self.teams.removeAll(keepingCapacity: true)
             
-            for (index, divisions) in values.enumerated() {
+            for (index, divisions) in values.sorted(by: { (division1, divisison2) in
+                division1.key < divisison2.key
+            }).enumerated() {
                 self.divisions.append(divisions.key)
                 self.teams.append([])
                 for team in divisions.value {
@@ -43,12 +45,10 @@ class HomeTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return divisions.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return teams[section].count
     }
 
@@ -61,43 +61,15 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return divisions[section]
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return divisions.map(shortenDivision)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func shortenDivision(division: String) -> String{
+        return String(division.suffix(1))
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+    
     /*
     // MARK: - Navigation
 
