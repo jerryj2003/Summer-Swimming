@@ -3,16 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B8EF2D48661FF74C1EE94B44 /* Pods_MCSL_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */; };
 		C47603F0244CD18900A26EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */; };
+		C4B736DB245F59C400ECFF4D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */; };
 		C4E32406243A58730097C007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32405243A58730097C007 /* AppDelegate.swift */; };
 		C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32407243A58730097C007 /* SceneDelegate.swift */; };
-		C4E3240A243A58730097C007 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32409243A58730097C007 /* FirstViewController.swift */; };
-		C4E3240C243A58730097C007 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3240B243A58730097C007 /* SecondViewController.swift */; };
 		C4E3240F243A58730097C007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E3240D243A58730097C007 /* Main.storyboard */; };
 		C4E32411243A587C0097C007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E32410243A587C0097C007 /* Assets.xcassets */; };
 		C4E32414243A587C0097C007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E32412243A587C0097C007 /* LaunchScreen.storyboard */; };
@@ -25,11 +24,10 @@
 		A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.release.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCSL_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		C4E32402243A58730097C007 /* MCSL Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MCSL Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E32405243A58730097C007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E32407243A58730097C007 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C4E32409243A58730097C007 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		C4E3240B243A58730097C007 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C4E3240E243A58730097C007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4E32410243A587C0097C007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4E32413243A587C0097C007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 				22FF5EDB6AB563EDB84BB568 /* Pods-MCSL Mobile.debug.xcconfig */,
 				A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,9 +88,8 @@
 			children = (
 				C4E32405243A58730097C007 /* AppDelegate.swift */,
 				C4E32407243A58730097C007 /* SceneDelegate.swift */,
-				C4E32409243A58730097C007 /* FirstViewController.swift */,
-				C4E3240B243A58730097C007 /* SecondViewController.swift */,
 				C4E3240D243A58730097C007 /* Main.storyboard */,
+				C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */,
 				C4E3241D243A654B0097C007 /* Swimmer.swift */,
 				C4E3241B243A5F730097C007 /* FavoritesTableViewController.swift */,
 				C4E32410243A587C0097C007 /* Assets.xcassets */,
@@ -220,12 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E3240C243A58730097C007 /* SecondViewController.swift in Sources */,
-				C4E3240A243A58730097C007 /* FirstViewController.swift in Sources */,
 				C4E3241E243A654B0097C007 /* Swimmer.swift in Sources */,
 				C4E32406243A58730097C007 /* AppDelegate.swift in Sources */,
 				C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */,
 				C4E3241C243A5F730097C007 /* FavoritesTableViewController.swift in Sources */,
+				C4B736DB245F59C400ECFF4D /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
