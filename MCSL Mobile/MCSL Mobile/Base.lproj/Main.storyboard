@@ -45,16 +45,15 @@
         <scene sceneID="Pcf-AR-etm">
             <objects>
                 <tableViewController title="Favorites" id="y6t-EO-reB" customClass="FavoritesTableViewController" customModule="MCSL_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lgQ-n7-MMo">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="lgQ-n7-MMo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" textLabel="7m9-Ei-M0O" detailTextLabel="XDx-o7-vOv" imageView="r4O-84-exT" style="IBUITableViewCellStyleSubtitle" id="wpa-yR-vVd">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wpa-yR-vVd" id="dLV-B8-sOy">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7m9-Ei-M0O">
@@ -94,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1510" y="-518"/>
         </scene>
-        <!--Home-->
+        <!--Teams-->
         <scene sceneID="3X6-mL-KRJ">
             <objects>
                 <tableViewController id="C5g-jS-0MU" customClass="HomeTableViewController" customModule="MCSL_Mobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +125,7 @@
                             <outlet property="delegate" destination="C5g-jS-0MU" id="F1l-XP-1Wi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="ioZ-zT-ACp"/>
+                    <navigationItem key="navigationItem" title="Teams" id="ioZ-zT-ACp"/>
                     <connections>
                         <segue destination="qIZ-0P-Fcx" kind="show" id="x6F-Qi-uka"/>
                     </connections>
@@ -142,29 +141,25 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="cdG-hB-yFD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="O9y-uL-cz8">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Week 1"/>
-                                <segment title="Week 2"/>
-                                <segment title="Week 3"/>
-                                <segment title="Week 4"/>
-                                <segment title="Week 5"/>
-                            </segments>
-                        </segmentedControl>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="kqU-V0-uI9" style="IBUITableViewCellStyleDefault" id="Bfn-03-3lQ">
-                                <rect key="frame" x="20" y="87.5" width="374" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamMember" textLabel="kqU-V0-uI9" detailTextLabel="bgi-Ga-O3z" style="IBUITableViewCellStyleSubtitle" id="Bfn-03-3lQ">
+                                <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bfn-03-3lQ" id="YkF-sJ-ZFv">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kqU-V0-uI9">
-                                            <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgi-Ga-O3z">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -179,10 +174,54 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="b4o-rE-Ibu"/>
+                    <connections>
+                        <segue destination="8Fa-aq-2WX" kind="show" id="xCo-R5-jdi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tg7-2Q-1zx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2348" y="185"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Vfm-9L-gjR">
+            <objects>
+                <tableViewController id="8Fa-aq-2WX" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="iMx-Ho-ttj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="XdL-eX-Hlv">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Week 1"/>
+                                <segment title="Week 2"/>
+                                <segment title="Week 3"/>
+                                <segment title="Week 4"/>
+                                <segment title="Week 5"/>
+                            </segments>
+                        </segmentedControl>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5q9-db-ahv">
+                                <rect key="frame" x="20" y="87.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5q9-db-ahv" id="9BO-Rq-W9q">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Fa-aq-2WX" id="4bd-ba-23T"/>
+                            <outlet property="delegate" destination="8Fa-aq-2WX" id="9gf-35-bt4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Uwk-Uw-M4X">
+                        <nil key="title"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5H-TY-PIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3191" y="185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OrM-sL-hcx">
