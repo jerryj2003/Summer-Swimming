@@ -10,12 +10,12 @@ import UIKit
 
 class TeamTableViewController: UITableViewController {
     
-    var swimmers = [(name: String, age: Int)]()
-    var team : String?
-    var division : String?
-    
+    var members = [(name: String, age: Int)]()
+    var teamAbr : String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        print (teamAbr)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,17 +28,18 @@ class TeamTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return members.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teamMember", for: indexPath)
-
+        let theMember = members[indexPath.row]
+        cell.textLabel!.text = (teamAbr! + " | " + String(theMember.age))
         // Configure the cell...
 
         return cell

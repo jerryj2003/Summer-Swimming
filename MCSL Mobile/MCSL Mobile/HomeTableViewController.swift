@@ -12,11 +12,11 @@ import UIKit
 class HomeTableViewController: UITableViewController {
 
     var divisions = [String]()
-    var teams = [[String]]()
+    var teams = [[(teamFull: String, teamAbr: String)]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref.observe(.value) {(snapshot) in
+        ref.child("divisions").observe(.value) {(snapshot) in
             let values = snapshot.value as? [
                 String: [String: AnyObject]
             ] ?? [:]
@@ -29,7 +29,7 @@ class HomeTableViewController: UITableViewController {
                 self.divisions.append(divisions.key)
                 self.teams.append([])
                 for team in divisions.value {
-                    self.teams[index].append(team.key)
+                    self.teams[index].append((team.value as! String, team.key))
                 }
             }
             self.tableView.reloadData()
@@ -54,7 +54,7 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Team Cells", for: indexPath)
-        cell.textLabel?.text = teams[indexPath.section][indexPath.row]
+        cell.textLabel?.text = teams[indexPath.section][indexPath.row].teamFull
         return cell
     }
     
@@ -70,14 +70,19 @@ class HomeTableViewController: UITableViewController {
         return String(division.suffix(1))
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let teamLocation = tableView.indexPath(for: cell)
+        let abr = teams[teamLocation!.section][teamLocation!.row].teamAbr
+        let destinationVC = segue.destination as! TeamTableViewController
+        destinationVC.teamAbr = abr
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
