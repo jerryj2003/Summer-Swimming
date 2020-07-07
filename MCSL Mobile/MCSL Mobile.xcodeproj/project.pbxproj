@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8EF2D48661FF74C1EE94B44 /* Pods_MCSL_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */; };
+		C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */; };
 		C47603F0244CD18900A26EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */; };
 		C4A3F06F24998BD100BA5ABF /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */; };
 		C4B736DB245F59C400ECFF4D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */; };
@@ -17,13 +18,13 @@
 		C4E32411243A587C0097C007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E32410243A587C0097C007 /* Assets.xcassets */; };
 		C4E32414243A587C0097C007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E32412243A587C0097C007 /* LaunchScreen.storyboard */; };
 		C4E3241C243A5F730097C007 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3241B243A5F730097C007 /* FavoritesTableViewController.swift */; };
-		C4E3241E243A654B0097C007 /* Swimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3241D243A654B0097C007 /* Swimmer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22FF5EDB6AB563EDB84BB568 /* Pods-MCSL Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.debug.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.release.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCSL_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
 		C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		C4E32413243A587C0097C007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4E32415243A587C0097C007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4E3241B243A5F730097C007 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
-		C4E3241D243A654B0097C007 /* Swimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swimmer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 				C4E3240D243A58730097C007 /* Main.storyboard */,
 				C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */,
 				C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */,
-				C4E3241D243A654B0097C007 /* Swimmer.swift */,
+				C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */,
 				C4E3241B243A5F730097C007 /* FavoritesTableViewController.swift */,
 				C4E32410243A587C0097C007 /* Assets.xcassets */,
 				C4E32412243A587C0097C007 /* LaunchScreen.storyboard */,
@@ -219,10 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E3241E243A654B0097C007 /* Swimmer.swift in Sources */,
 				C4E32406243A58730097C007 /* AppDelegate.swift in Sources */,
 				C4A3F06F24998BD100BA5ABF /* TeamTableViewController.swift in Sources */,
 				C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */,
+				C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */,
 				C4E3241C243A5F730097C007 /* FavoritesTableViewController.swift in Sources */,
 				C4B736DB245F59C400ECFF4D /* HomeTableViewController.swift in Sources */,
 			);
