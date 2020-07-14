@@ -165,6 +165,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8Fa-aq-2WX" kind="show" id="VIn-Z5-YRL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -174,18 +177,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="b4o-rE-Ibu"/>
-                    <connections>
-                        <segue destination="8Fa-aq-2WX" kind="show" id="xCo-R5-jdi"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tg7-2Q-1zx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2348" y="185"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Member Table View Controller-->
         <scene sceneID="Vfm-9L-gjR">
             <objects>
-                <tableViewController id="8Fa-aq-2WX" sceneMemberID="viewController">
+                <tableViewController id="8Fa-aq-2WX" customClass="MemberTableViewController" customModule="MCSL_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="iMx-Ho-ttj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

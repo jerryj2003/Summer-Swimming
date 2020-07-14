@@ -10,7 +10,7 @@ import UIKit
 
 class TeamTableViewController: UITableViewController {
     
-    var members = [(name: String, age: Int?)]()
+    var members = [(name: String, age: Int?, id: String)]()
     var teamAbr : String?
     
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class TeamTableViewController: UITableViewController {
             }){
                 ref.child("persons").child(member.key).child("age").observeSingleEvent(of: .value) { (snapshot) in
                     let age = snapshot.value as? Int
-                    self.members.append((name: member.value, age: age))
+                    self.members.append((name: member.value, age: age, id: member.key))
                     self.tableView.reloadData()
                 }
             }
@@ -90,14 +90,15 @@ class TeamTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let memberLocation = tableView.indexPath(for: cell)
+        let memberID = members[memberLocation!.row].id
+        let destinationVC = segue.destination as! MemberTableViewController
+        destinationVC.id = memberID
+    }
 }
