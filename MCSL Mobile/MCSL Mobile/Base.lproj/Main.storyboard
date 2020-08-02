@@ -201,7 +201,7 @@
                             </segments>
                         </segmentedControl>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="MN6-gJ-dpT" style="IBUITableViewCellStyleDefault" id="5q9-db-ahv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="event" textLabel="MN6-gJ-dpT" style="IBUITableViewCellStyleDefault" id="5q9-db-ahv">
                                 <rect key="frame" x="20" y="87.5" width="374" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5q9-db-ahv" id="9BO-Rq-W9q">
@@ -227,6 +227,9 @@
                     <navigationItem key="navigationItem" id="Uwk-Uw-M4X">
                         <nil key="title"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="weeks" destination="XdL-eX-Hlv" id="VY0-Fu-gCu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5H-TY-PIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

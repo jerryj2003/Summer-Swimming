@@ -11,18 +11,18 @@ import CodableFirebase
 
 class MemberTableViewController: UITableViewController {
     
-    var events = [String]()
-    var time = [(seed: String, final: String)]()
+    var swimmer : Swimmer?
     var id : String?
-    
+    @IBOutlet weak var weeks: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref.child("persons").child(id!).observe(.value) {(snapshot) in
             guard let value = snapshot.value else { return }
             do {
-                let model = try FirebaseDecoder().decode(Model.self, from: value)
-                print(model)
+                let model = try FirebaseDecoder().decode(Swimmer.self, from: value)
+                self.swimmer = model
+                self.tableView.reloadData()
             } catch {
                 print(error)
             }
@@ -38,23 +38,29 @@ class MemberTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return swimmer?.events["Week\(weeks.selectedSegmentIndex+1)"]?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
     
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath)
+        
+        if let event = swimmer?.events["Week\(weeks.selectedSegmentIndex+1)"]?[indexPath.section]{
+            cell.textLabel?.text = "\(event.seed) | \(event.final)"
+        }
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let event = swimmer?.events["Week\(weeks.selectedSegmentIndex+1)"]?[section]
+        return event?.event
+    }
+    
     
     /*
      // Override to support conditional editing of the table view.

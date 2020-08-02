@@ -12,7 +12,7 @@ struct EventInfo: Codable {
     let seed: String
     let final: String
 }
-struct Model: Codable {
+struct Swimmer: Codable {
     let name: String
     let age: Int
     let team: String
