@@ -15,6 +15,9 @@ class MemberTableViewController: UITableViewController {
     var id : String?
     @IBOutlet weak var weeks: UISegmentedControl!
     
+    @IBAction func segmentChange(_ sender: UISegmentedControl) {
+        self.tableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         ref.child("persons").child(id!).observe(.value) {(snapshot) in
@@ -22,6 +25,14 @@ class MemberTableViewController: UITableViewController {
             do {
                 let model = try FirebaseDecoder().decode(Swimmer.self, from: value)
                 self.swimmer = model
+                for index in 1...5 {
+                    if model.events.keys.contains("Week\(index)") {
+                        self.weeks.setEnabled(true, forSegmentAt: index-1)
+                        self.weeks.selectedSegmentIndex = index-1
+                    } else {
+                        self.weeks.setEnabled(false, forSegmentAt: index-1)
+                    }
+                }
                 self.tableView.reloadData()
             } catch {
                 print(error)
@@ -50,7 +61,7 @@ class MemberTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath)
         
         if let event = swimmer?.events["Week\(weeks.selectedSegmentIndex+1)"]?[indexPath.section]{
-            cell.textLabel?.text = "\(event.seed) | \(event.final)"
+            cell.textLabel?.text = "Seed: \(event.seed) | Final: \(event.final)"
         }
         
         return cell

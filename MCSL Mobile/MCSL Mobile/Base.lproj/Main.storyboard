@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1510" y="-518"/>
         </scene>
-        <!--Teams-->
+        <!--MCSL Mobile-->
         <scene sceneID="3X6-mL-KRJ">
             <objects>
                 <tableViewController id="C5g-jS-0MU" customClass="HomeTableViewController" customModule="MCSL_Mobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,15 +101,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Team Cells" textLabel="lsT-8r-jhc" style="IBUITableViewCellStyleDefault" id="Kd1-yn-H8m">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Team Cells" textLabel="lsT-8r-jhc" style="IBUITableViewCellStyleDefault" id="Kd1-yn-H8m">
                                 <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kd1-yn-H8m" id="8jr-gu-EED">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Bethesda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lsT-8r-jhc">
-                                            <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="315" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -128,7 +128,9 @@
                             <outlet property="delegate" destination="C5g-jS-0MU" id="F1l-XP-1Wi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Teams" id="ioZ-zT-ACp"/>
+                    <navigationItem key="navigationItem" title="MCSL Mobile" largeTitleDisplayMode="always" id="ioZ-zT-ACp">
+                        <barButtonItem key="backBarButtonItem" title="Teams" id="AcN-sz-qjd"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxA-HB-Mmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,11 +144,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamMember" textLabel="kqU-V0-uI9" detailTextLabel="bgi-Ga-O3z" style="IBUITableViewCellStyleSubtitle" id="Bfn-03-3lQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="teamMember" textLabel="kqU-V0-uI9" detailTextLabel="bgi-Ga-O3z" style="IBUITableViewCellStyleSubtitle" id="Bfn-03-3lQ">
                                 <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bfn-03-3lQ" id="YkF-sJ-ZFv">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Jerry Ji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kqU-V0-uI9">
@@ -176,7 +178,7 @@
                             <outlet property="delegate" destination="qIZ-0P-Fcx" id="Z5M-T7-0ia"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="b4o-rE-Ibu"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="b4o-rE-Ibu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tg7-2Q-1zx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,9 +201,12 @@
                                 <segment title="Week 4"/>
                                 <segment title="Week 5"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentChange:" destination="8Fa-aq-2WX" eventType="valueChanged" id="8ks-mU-NKs"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="event" textLabel="MN6-gJ-dpT" style="IBUITableViewCellStyleDefault" id="5q9-db-ahv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="event" textLabel="MN6-gJ-dpT" style="IBUITableViewCellStyleDefault" id="5q9-db-ahv">
                                 <rect key="frame" x="20" y="87.5" width="374" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5q9-db-ahv" id="9BO-Rq-W9q">
@@ -224,7 +229,7 @@
                             <outlet property="delegate" destination="8Fa-aq-2WX" id="9gf-35-bt4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Uwk-Uw-M4X">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Uwk-Uw-M4X">
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
@@ -260,8 +265,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kbt-eh-MUf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="ETp-pz-gq5"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tma-hG-ThZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tma-hG-ThZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

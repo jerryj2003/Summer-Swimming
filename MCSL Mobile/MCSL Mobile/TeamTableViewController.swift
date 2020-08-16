@@ -28,6 +28,9 @@ class TeamTableViewController: UITableViewController {
                 }
             }
         }
+        ref.child("teams").child(teamAbr!).child("full").observe(.value) { (snapshot) in
+            self.title = snapshot.value as? String
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,7 +101,9 @@ class TeamTableViewController: UITableViewController {
         let cell = sender as! UITableViewCell
         let memberLocation = tableView.indexPath(for: cell)
         let memberID = members[memberLocation!.row].id
+        let memberName = members[memberLocation!.row].name
         let destinationVC = segue.destination as! MemberTableViewController
         destinationVC.id = memberID
+        destinationVC.title = memberName
     }
 }
