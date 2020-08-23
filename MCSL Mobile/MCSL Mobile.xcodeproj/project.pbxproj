@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8EF2D48661FF74C1EE94B44 /* Pods_MCSL_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */; };
+		C458F85124F2BE3B00732355 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458F85024F2BE3B00732355 /* SearchTableViewController.swift */; };
 		C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */; };
 		C46D192C24B547C4009A9AA7 /* Swimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192B24B547C4009A9AA7 /* Swimmer.swift */; };
 		C47603F0244CD18900A26EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */; };
@@ -35,6 +36,7 @@
 		22FF5EDB6AB563EDB84BB568 /* Pods-MCSL Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.debug.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.release.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCSL_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C458F85024F2BE3B00732355 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
 		C46D192B24B547C4009A9AA7 /* Swimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swimmer.swift; sourceTree = "<group>"; };
 		C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				C4E32405243A58730097C007 /* AppDelegate.swift */,
 				C4E32407243A58730097C007 /* SceneDelegate.swift */,
 				C4E3240D243A58730097C007 /* Main.storyboard */,
+				C458F85024F2BE3B00732355 /* SearchTableViewController.swift */,
 				C4F3242D24E98CD400AF8CF5 /* IconsTableViewController.swift */,
 				C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */,
 				C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */,
@@ -269,6 +272,7 @@
 				C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */,
 				C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */,
 				C4B736DB245F59C400ECFF4D /* HomeTableViewController.swift in Sources */,
+				C458F85124F2BE3B00732355 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

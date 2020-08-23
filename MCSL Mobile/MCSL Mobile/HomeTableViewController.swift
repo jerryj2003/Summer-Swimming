@@ -9,7 +9,7 @@
 import UIKit
 
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
 
     var divisions = [String]()
     var teams = [[(teamFull: String, teamAbr: String)]]()
@@ -34,14 +34,19 @@ class HomeTableViewController: UITableViewController {
             }
             self.tableView.reloadData()
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let searchResult = storyBoard.instantiateViewController(identifier: "searchTableView")
+        let searchController = UISearchController(searchResultsController: searchResult)
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
     }
-
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchTerm = searchController.searchBar.text
+        let searchResultCotroller = searchController.searchResultsController as! SearchTableViewController
+        searchResultCotroller.searchTerm = searchTerm
+        searchResultCotroller.update()
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

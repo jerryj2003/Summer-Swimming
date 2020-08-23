@@ -4,18 +4,42 @@
 <dict>
 	<key>CFBundleIcons</key>
 	<dict>
-		<key>CFBundleAlternateIcons
-
-
-CFBundleAlternateIcons</key>
+		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>alternate</key>
+			<key>midnight</key>
 			<dict>
 				<key>UIPrerenderedIcon</key>
 				<false/>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>alternate</string>
+					<string>midnight</string>
+				</array>
+			</dict>
+			<key>luminous</key>
+			<dict>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>luminous</string>
+				</array>
+			</dict>
+			<key>galaxy</key>
+			<dict>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>galaxy</string>
+				</array>
+			</dict>
+			<key>beach</key>
+			<dict>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>beach</string>
 				</array>
 			</dict>
 		</dict>
