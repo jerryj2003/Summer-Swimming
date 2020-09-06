@@ -64,7 +64,7 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return divisions[section]
+        return "Division "+divisions[section]
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
