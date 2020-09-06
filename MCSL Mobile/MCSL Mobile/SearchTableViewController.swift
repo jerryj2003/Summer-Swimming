@@ -18,7 +18,6 @@ class SearchTableViewController: UITableViewController {
                 return
         }
         ref.child("persons").queryOrdered(byChild: "name").queryStarting(atValue: searchTerm).queryEnding(atValue: searchTerm! + "\u{f8ff}").observeSingleEvent(of: .value) { (snapshot) in
-            print(snapshot)
         }
     }
     

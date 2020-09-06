@@ -28,7 +28,8 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
             }).enumerated() {
                 self.divisions.append(divisions.key)
                 self.teams.append([])
-                for team in divisions.value {
+                for team in divisions.value.sorted(by: { (team1, team2) -> Bool in
+                    (team1.value as! String) < (team2.value as! String)}) {
                     self.teams[index].append((team.value as! String, team.key))
                 }
             }
@@ -64,7 +65,7 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Division "+divisions[section]
+        return "Division \(divisions[section])"
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {

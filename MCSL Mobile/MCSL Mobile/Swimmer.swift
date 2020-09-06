@@ -9,7 +9,7 @@
 import Foundation
 struct EventInfo: Codable {
     let event: String
-    let seed: String
+    let seed: String?
     let final: String
 }
 struct Swimmer: Codable {

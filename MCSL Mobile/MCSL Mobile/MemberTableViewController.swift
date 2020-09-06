@@ -61,7 +61,11 @@ class MemberTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath)
         
         if let event = swimmer?.events["Week\(weeks.selectedSegmentIndex+1)"]?[indexPath.section]{
-            cell.textLabel?.text = "Seed: \(event.seed) | Final: \(event.final)"
+            if let time = event.seed {
+                cell.textLabel?.text = "Seed: \(time) | Final: \(event.final)"
+            }else{
+                cell.textLabel?.text = "Seed: NT | Final: \(event.final)"
+            }
         }
         
         return cell
