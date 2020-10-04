@@ -7,17 +7,34 @@
 //
 
 import UIKit
+import CodableFirebase
 
 class SearchTableViewController: UITableViewController {
 
     var searchTerm : String?
+    var searchResult = [Swimmer]()
     
     func update() {
         guard searchTerm != nil
             else {
                 return
         }
-        ref.child("persons").queryOrdered(byChild: "name").queryStarting(atValue: searchTerm).queryEnding(atValue: searchTerm! + "\u{f8ff}").observeSingleEvent(of: .value) { (snapshot) in
+        ref.child("persons").queryOrdered(byChild: "searchTerm").queryStarting(atValue: searchTerm?.lowercased()).queryEnding(atValue: searchTerm!.lowercased() + "\u{f8ff}").observeSingleEvent(of: .value) { (snapshot) in
+            guard let value = snapshot.value else{ return }
+            do {
+                let resultDict = try FirebaseDecoder().decode([String:Swimmer].self, from: value).sorted(by: { (swimmer1, swimmer2) -> Bool in
+                    swimmer1.value.name < swimmer2.value.name
+                })
+                self.searchResult = resultDict.map({ (arg0) -> Swimmer in
+                    
+                    let (_, value) = arg0
+                    return value
+                })
+                self.tableView.reloadData()
+            } catch {
+                print(error)
+            }
+            
         }
     }
     
@@ -31,23 +48,21 @@ class SearchTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return searchResult.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
+        cell.textLabel?.text = searchResult[indexPath.row].name
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
