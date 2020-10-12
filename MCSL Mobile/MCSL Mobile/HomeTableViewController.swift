@@ -46,7 +46,6 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
         let searchTerm = searchController.searchBar.text
         let searchResultCotroller = searchController.searchResultsController as! SearchTableViewController
         searchResultCotroller.searchTerm = searchTerm
-        searchResultCotroller.update()
     }
     // MARK: - Table view data source
 
