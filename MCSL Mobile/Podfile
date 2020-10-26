@@ -13,6 +13,7 @@ target 'MCSL Mobile' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'CodableFirebase'
+  pod 'DZNEmptyDataSet'
   
 
 end

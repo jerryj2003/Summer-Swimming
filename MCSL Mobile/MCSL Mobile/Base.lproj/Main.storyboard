@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +18,8 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" name="Theme1"/>
+                        <color key="selectedImageTintColor" name="Theme1"/>
                     </tabBar>
                     <connections>
                         <segue destination="kbt-eh-MUf" kind="relationship" relationship="viewControllers" id="QOw-vk-8Ac"/>
@@ -598,9 +601,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c5S-Sr-g9F"/>
+        <segue reference="VIn-Z5-YRL"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" systemColor="systemOrangeColor"/>
+    <color key="tintColor" name="Theme1"/>
     <resources>
         <image name="beach.png" width="60" height="60"/>
         <image name="classic.png" width="60" height="60"/>
@@ -611,11 +614,11 @@
         <image name="midnight.png" width="60" height="60"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="wand.and.stars" catalog="system" width="128" height="113"/>
+        <namedColor name="Theme1">
+            <color red="1" green="0.58399999141693115" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
