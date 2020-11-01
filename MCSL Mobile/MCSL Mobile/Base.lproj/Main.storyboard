@@ -290,6 +290,43 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oen-sh-6HG">
+                                        <rect key="frame" x="20" y="235.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oen-sh-6HG" id="paE-Y9-dru">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="qcG-q4-sRF">
+                                                    <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="K5v-bQ-YQ7"/>
+                                                        <constraint firstAttribute="width" constant="60" id="eYj-Er-4AR"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY7-24-huv">
+                                                    <rect key="frame" x="88" y="39.5" width="266" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qcG-q4-sRF" firstAttribute="leading" secondItem="paE-Y9-dru" secondAttribute="leading" constant="20" symbolic="YES" id="0Sj-0G-HS3"/>
+                                                <constraint firstItem="aY7-24-huv" firstAttribute="leading" secondItem="qcG-q4-sRF" secondAttribute="trailing" constant="8" symbolic="YES" id="1ZS-Ui-ylb"/>
+                                                <constraint firstItem="aY7-24-huv" firstAttribute="centerY" secondItem="qcG-q4-sRF" secondAttribute="centerY" id="8o4-b9-Zk0"/>
+                                                <constraint firstAttribute="bottom" secondItem="qcG-q4-sRF" secondAttribute="bottom" constant="20" symbolic="YES" id="cBa-Ad-deI"/>
+                                                <constraint firstItem="qcG-q4-sRF" firstAttribute="top" secondItem="paE-Y9-dru" secondAttribute="top" constant="20" symbolic="YES" id="gfz-nx-Kab"/>
+                                                <constraint firstAttribute="trailing" secondItem="aY7-24-huv" secondAttribute="trailing" constant="20" symbolic="YES" id="rOy-Zu-e4D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -511,17 +548,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" textLabel="7OA-8D-Ibd" style="IBUITableViewCellStyleDefault" id="B4C-Tw-Ymj">
-                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" textLabel="7OA-8D-Ibd" detailTextLabel="vuk-OF-1Om" style="IBUITableViewCellStyleSubtitle" id="B4C-Tw-Ymj">
+                                <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B4C-Tw-Ymj" id="thg-Wn-iJF">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7OA-8D-Ibd">
-                                            <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vuk-OF-1Om">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -601,12 +645,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VIn-Z5-YRL"/>
+        <segue reference="c5S-Sr-g9F"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Theme1"/>
     <resources>
         <image name="beach.png" width="60" height="60"/>
         <image name="classic.png" width="60" height="60"/>
+        <image name="dark.png" width="60" height="60"/>
         <image name="galaxy.png" width="60" height="60"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>

@@ -12,6 +12,11 @@ import DZNEmptyDataSet
 
 class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
+    struct SimpleSwimmer : Codable{
+        var name : String
+        var age : Int
+        var team : String
+    }
     var searchTerm : String?{
         didSet{
             timer?.invalidate()
@@ -19,12 +24,13 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
                 self.update()
             }
             if searchTerm?.isEmpty == false{
+                searchResult = []
                 loadingIndicator.startAnimating()
                 tableView.reloadData()
             }
         }
     }
-    var searchResult = [(name: String, ID: String)]()
+    var searchResult = [(swimmerInfo: SimpleSwimmer, ID: String)]()
     var timer : Timer?
     var loadingIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
     
@@ -41,9 +47,6 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
                 return
             }
             DispatchQueue.global().async {
-                struct SimpleSwimmer : Codable{
-                    var name : String
-                }
                 do {
                     if self.searchTerm != searchTermCopy{
                         return
@@ -51,10 +54,10 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
                     let resultDict = try FirebaseDecoder().decode([String:SimpleSwimmer].self, from: value).sorted(by: { (swimmer1, swimmer2) -> Bool in
                         swimmer1.value.name < swimmer2.value.name
                     })
-                    let searchResultCopy : [(name: String, ID: String)]
+                    let searchResultCopy : [(swimmerInfo: SimpleSwimmer, ID: String)]
                     searchResultCopy = resultDict.map({ (arg0) in
                         let (ID, value) = arg0
-                        return (value.name, ID)
+                        return (value, ID)
                     })
                     self.update(to: searchResultCopy, for: searchTermCopy)
                 } catch {
@@ -65,7 +68,7 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
         }
     }
     
-    func update(to results: [(name: String, ID: String)], for searchTerm: String?){
+    func update(to results: [(swimmerInfo: SimpleSwimmer, ID: String)], for searchTerm: String?){
         if searchTerm == self.searchTerm{
             searchResult = results
             DispatchQueue.main.async {
@@ -108,7 +111,9 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
-        cell.textLabel?.text = searchResult[indexPath.row].name
+        let info = searchResult[indexPath.row].swimmerInfo
+        cell.textLabel?.text = info.name
+        cell.detailTextLabel?.text = "\(info.team) | \(info.age)"
         return cell
     }
     
@@ -156,7 +161,7 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
         let cell = sender as! UITableViewCell
         let memberLocation = tableView.indexPath(for: cell)
         let memberID = searchResult[memberLocation!.row].ID
-        let memberName = searchResult[memberLocation!.row].name
+        let memberName = searchResult[memberLocation!.row].swimmerInfo.name
         let destinationVC = segue.destination as! MemberTableViewController
         destinationVC.id = memberID
         destinationVC.title = memberName

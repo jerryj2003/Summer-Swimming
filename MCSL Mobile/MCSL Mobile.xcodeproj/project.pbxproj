@@ -12,6 +12,8 @@
 		C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */; };
 		C46D192C24B547C4009A9AA7 /* Swimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192B24B547C4009A9AA7 /* Swimmer.swift */; };
 		C47603F0244CD18900A26EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */; };
+		C497F6C5254F2B6800B8951A /* dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C497F6C4254F2B6800B8951A /* dark@2x.png */; };
+		C497F6C8254F2B6E00B8951A /* dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C497F6C7254F2B6E00B8951A /* dark@3x.png */; };
 		C4A3F06F24998BD100BA5ABF /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */; };
 		C4B736DB245F59C400ECFF4D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */; };
 		C4E32406243A58730097C007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32405243A58730097C007 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 		C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
 		C46D192B24B547C4009A9AA7 /* Swimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swimmer.swift; sourceTree = "<group>"; };
 		C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C497F6C4254F2B6800B8951A /* dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark@2x.png"; sourceTree = "<group>"; };
+		C497F6C7254F2B6E00B8951A /* dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark@3x.png"; sourceTree = "<group>"; };
 		C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		C4E32402243A58730097C007 /* MCSL Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MCSL Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,8 @@
 				C4F3243F24EA149000AF8CF5 /* luminous@3x.png */,
 				C4F3244324EA154200AF8CF5 /* midnight@2x.png */,
 				C4F3244424EA154300AF8CF5 /* midnight@3x.png */,
+				C497F6C4254F2B6800B8951A /* dark@2x.png */,
+				C497F6C7254F2B6E00B8951A /* dark@3x.png */,
 				C4E32412243A587C0097C007 /* LaunchScreen.storyboard */,
 				C4E32415243A587C0097C007 /* Info.plist */,
 				C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */,
@@ -200,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F3243A24EA120E00AF8CF5 /* galaxy@2x.png in Resources */,
+				C497F6C5254F2B6800B8951A /* dark@2x.png in Resources */,
 				C4E32414243A587C0097C007 /* LaunchScreen.storyboard in Resources */,
 				C4F3243924EA120E00AF8CF5 /* galaxy@3x.png in Resources */,
 				C4F3243524EA0E8B00AF8CF5 /* classic@3x.png in Resources */,
@@ -209,6 +216,7 @@
 				C4F3244624EA154300AF8CF5 /* midnight@3x.png in Resources */,
 				C4F3243D24EA130200AF8CF5 /* beach@2x.png in Resources */,
 				C4F3244224EA149100AF8CF5 /* luminous@2x.png in Resources */,
+				C497F6C8254F2B6E00B8951A /* dark@3x.png in Resources */,
 				C4E3240F243A58730097C007 /* Main.storyboard in Resources */,
 				C4F3244524EA154300AF8CF5 /* midnight@2x.png in Resources */,
 				C4F3243624EA0E8B00AF8CF5 /* classic@2x.png in Resources */,
