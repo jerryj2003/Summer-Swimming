@@ -10,8 +10,12 @@ import UIKit
 import CodableFirebase
 import DZNEmptyDataSet
 
-class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+class SearchTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
+    init(tableView : UITableView) {
+        self.searchTableView = tableView
+    }
+    let searchTableView : UITableView
     struct SimpleSwimmer : Codable{
         var name : String
         var age : Int
@@ -26,7 +30,7 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
             if searchTerm?.isEmpty == false{
                 searchResult = []
                 loadingIndicator.startAnimating()
-                tableView.reloadData()
+                searchTableView.reloadData()
             }
         }
     }
@@ -73,7 +77,7 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
             searchResult = results
             DispatchQueue.main.async {
                 self.loadingIndicator.stopAnimating()
-                self.tableView.reloadData()
+                self.searchTableView.reloadData()
             }
         }
     }
@@ -87,29 +91,28 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
         return NSAttributedString(string: emptyText)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.emptyDataSetSource = self
-        tableView.emptyDataSetDelegate = self
-        loadingIndicator.center = view.center
+    func viewDidLoad() {
+        searchTableView.emptyDataSetSource = self
+        searchTableView.emptyDataSetDelegate = self
+        loadingIndicator.center = searchTableView.center
         loadingIndicator.hidesWhenStopped = true
-        view.addSubview(loadingIndicator)
+        searchTableView.addSubview(loadingIndicator)
         loadingIndicator.color = #colorLiteral(red: 0.9637133479, green: 0.7429386973, blue: 0.3061919808, alpha: 1)
     }
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return searchResult.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
         let info = searchResult[indexPath.row].swimmerInfo
         cell.textLabel?.text = info.name
@@ -157,9 +160,9 @@ class SearchTableViewController: UITableViewController, DZNEmptyDataSetSource, D
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
-        let memberLocation = tableView.indexPath(for: cell)
+        let memberLocation = searchTableView.indexPath(for: cell)
         let memberID = searchResult[memberLocation!.row].ID
         let memberName = searchResult[memberLocation!.row].swimmerInfo.name
         let destinationVC = segue.destination as! MemberTableViewController

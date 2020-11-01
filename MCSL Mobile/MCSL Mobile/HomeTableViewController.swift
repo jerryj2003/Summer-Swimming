@@ -13,9 +13,16 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
 
     var divisions = [String]()
     var teams = [[(teamFull: String, teamAbr: String)]]()
+    lazy var searchTableViewController = SearchTableViewController(tableView: tableView)
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    var isSearching : Bool{
+        return searchController.searchBar.text?.isEmpty == false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchTableViewController.viewDidLoad()
         ref.child("divisions").observe(.value) {(snapshot) in
             let values = snapshot.value as? [
                 String: [String: AnyObject]
@@ -35,39 +42,50 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
             }
             self.tableView.reloadData()
         }
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let searchResult = storyBoard.instantiateViewController(identifier: "searchTableView")
-        let searchController = UISearchController(searchResultsController: searchResult)
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
     }
     
     func updateSearchResults(for searchController: UISearchController) {
         let searchTerm = searchController.searchBar.text
-        let searchResultCotroller = searchController.searchResultsController as! SearchTableViewController
-        searchResultCotroller.searchTerm = searchTerm
+        searchTableViewController.searchTerm = searchTerm
     }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        if isSearching{
+            return searchTableViewController.numberOfSections(in: tableView)
+        }
         return divisions.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isSearching{
+            return searchTableViewController.tableView(tableView, numberOfRowsInSection: section)
+        }
         return teams[section].count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if isSearching{
+            return searchTableViewController.tableView(tableView, cellForRowAt: indexPath)
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Team Cells", for: indexPath)
         cell.textLabel?.text = teams[indexPath.section][indexPath.row].teamFull
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if isSearching{
+            return nil
+        }
         return "Division \(divisions[section])"
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        if isSearching{
+            return nil
+        }
         return divisions.map(shortenDivision)
     }
     
@@ -80,6 +98,9 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if isSearching{
+            return searchTableViewController.prepare(for: segue, sender: sender)
+        }
         let cell = sender as! UITableViewCell
         let teamLocation = tableView.indexPath(for: cell)
         let abr = teams[teamLocation!.section][teamLocation!.row].teamAbr
