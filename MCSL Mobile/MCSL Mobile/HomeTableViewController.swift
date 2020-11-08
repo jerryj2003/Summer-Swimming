@@ -44,6 +44,10 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
         }
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+        //Removes background during new search
+        searchController.obscuresBackgroundDuringPresentation = false
+        //Changes search bar placeholder to "Search Swimmer"
+        searchController.searchBar.placeholder = "Search Swimmer"
     }
     
     func updateSearchResults(for searchController: UISearchController) {

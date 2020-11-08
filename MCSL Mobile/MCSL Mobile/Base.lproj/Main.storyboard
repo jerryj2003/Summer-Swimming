@@ -3,9 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,22 +29,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-233" y="-117"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mDH-Uy-Ail">
-            <objects>
-                <viewController id="sLK-XV-kus" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lEe-jL-x5S">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="bJt-ZY-Jy2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1gL-7p-ea4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NXT-9y-KW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2349" y="-518"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Tfj-v2-LjN">
@@ -377,6 +360,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8Fa-aq-2WX" kind="show" id="SRE-ic-ydX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -385,9 +371,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Tz6-1C-eEI"/>
-                    <connections>
-                        <segue destination="sLK-XV-kus" kind="show" id="VZz-uz-rd9"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPs-3x-Lym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,7 +454,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="teamMember" textLabel="kqU-V0-uI9" detailTextLabel="bgi-Ga-O3z" style="IBUITableViewCellStyleSubtitle" id="Bfn-03-3lQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="teamMember" textLabel="kqU-V0-uI9" detailTextLabel="bgi-Ga-O3z" imageView="iER-Zi-xI7" style="IBUITableViewCellStyleSubtitle" id="Bfn-03-3lQ">
                                 <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bfn-03-3lQ" id="YkF-sJ-ZFv">
@@ -479,19 +462,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Jerry Ji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kqU-V0-uI9">
-                                            <rect key="frame" x="20" y="10" width="56" height="20.5"/>
+                                            <rect key="frame" x="59" y="10" width="56" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="*BE | 16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgi-Ga-O3z">
-                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="59" y="31.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="star" catalog="system" id="iER-Zi-xI7">
+                                            <rect key="frame" x="21" y="17" width="22" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -558,6 +545,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Uwk-Uw-M4X">
                         <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" image="star" catalog="system" id="DN8-2S-jC4"/>
                     </navigationItem>
                     <connections>
                         <outlet property="weeks" destination="XdL-eX-Hlv" id="VY0-Fu-gCu"/>
@@ -626,7 +614,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qvE-oe-Q3e"/>
+        <segue reference="SRE-ic-ydX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Theme1"/>
     <resources>
@@ -643,9 +631,6 @@
         <namedColor name="Theme1">
             <color red="1" green="0.58399999141693115" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
