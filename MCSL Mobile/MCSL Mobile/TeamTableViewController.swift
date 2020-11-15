@@ -13,6 +13,13 @@ class TeamTableViewController: UITableViewController {
     var members = [(name: String, age: Int?, id: String)]()
     var teamAbr : String?
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedMember = tableView.indexPathsForSelectedRows{
+            tableView.reloadRows(at: selectedMember, with: UITableView.RowAnimation.automatic)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref.child("teams").child(teamAbr!).child("members").observe(.value) {(snapshot) in
@@ -52,11 +59,18 @@ class TeamTableViewController: UITableViewController {
         } else {
             cell.detailTextLabel!.text = "\(teamAbr!)"
         }
-        // Configure the cell...
-        
+        cell.imageView?.image = FavoritesManager.shared.fill(ID:theMember.id)
+        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(tapStarButton))
+        cell.imageView?.addGestureRecognizer(gesture)
+        cell.imageView?.tag = indexPath.row
         return cell
     }
     
+    @objc func tapStarButton(gesture: UITapGestureRecognizer){
+        let gestureTag = gesture.view?.tag
+        FavoritesManager.shared.invert(ID:  members[gestureTag!].id)
+        (gesture.view as! UIImageView).image = FavoritesManager.shared.fill(ID: members[gestureTag!].id)
+    }
     
     /*
      // Override to support conditional editing of the table view.

@@ -14,12 +14,23 @@ class MemberTableViewController: UITableViewController {
     var swimmer : Swimmer?
     var id : String?
     @IBOutlet weak var weeks: UISegmentedControl!
+    @IBOutlet weak var starButton: UIBarButtonItem!
+    
+    @IBAction func toggleStar(_ sender: UIBarButtonItem) {
+        FavoritesManager.shared.invert(ID: id!)
+        fillStarButton()
+    }
+    
+    func fillStarButton(){
+        starButton.image = FavoritesManager.shared.fill(ID: id!)
+    }
     
     @IBAction func segmentChange(_ sender: UISegmentedControl) {
         self.tableView.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillStarButton()
         ref.child("persons").child(id!).observe(.value) {(snapshot) in
             guard let value = snapshot.value else { return }
             do {

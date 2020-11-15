@@ -17,7 +17,7 @@ import UIKit
 
 class IconsTableViewController: UITableViewController {
     //nil is the default icon
-    let icons : [String?] = [nil, "beach", "luminous", "midnight", "galaxy", "dark"]
+    let icons : [String?] = [nil, "beach", "luminous", "midnight", "galaxy", "dark", "light"]
 //    let colors : [UIColor] = [UIColor.init(named: "Theme1")!, UIColor.systemRed, UIColor.systemTeal, UIColor.systemPink, UIColor.systemOrange]
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UIApplication.shared.setAlternateIconName(icons[indexPath.row])
