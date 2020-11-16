@@ -81,7 +81,7 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if isSearching{
-            return nil
+            return "NAMES STARTING WITH \"\(searchController.searchBar.text!)\""
         }
         return "Division \(divisions[section])"
     }

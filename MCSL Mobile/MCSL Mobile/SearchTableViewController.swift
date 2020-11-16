@@ -24,7 +24,7 @@ class SearchTableViewController: NSObject, UITableViewDataSource, UITableViewDel
     var searchTerm : String?{
         didSet{
             timer?.invalidate()
-            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
+            timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { (_) in
                 self.update()
             }
             if searchTerm?.isEmpty == false{
