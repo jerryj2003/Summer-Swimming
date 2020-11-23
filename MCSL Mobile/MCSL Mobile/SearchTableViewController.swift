@@ -16,11 +16,7 @@ class SearchTableViewController: NSObject, UITableViewDataSource, UITableViewDel
         self.searchTableView = tableView
     }
     let searchTableView : UITableView
-    struct SimpleSwimmer : Codable{
-        var name : String
-        var age : Int
-        var team : String
-    }
+    
     var searchTerm : String?{
         didSet{
             timer?.invalidate()

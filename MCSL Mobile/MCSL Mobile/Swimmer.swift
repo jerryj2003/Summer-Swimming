@@ -18,3 +18,9 @@ struct Swimmer: Codable {
     let team: String
     let events: [String:[EventInfo]]
 }
+
+struct SimpleSwimmer : Codable{
+    var name : String
+    var age : Int
+    var team : String
+}
