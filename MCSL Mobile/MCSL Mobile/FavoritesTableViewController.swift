@@ -17,19 +17,7 @@ class FavoritesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         for i in favoriteIDs.indices{
-            ref.child("persons").child(favoriteIDs[i]).observeSingleEvent(of: .value) {(snapshot) in
-                guard let value = snapshot.value else { return }
-                do{
-                    let member = try FirebaseDecoder().decode(SimpleSwimmer.self, from: value)
-                    self.members[i] = member
-                    var indexPathArray = [IndexPath]()
-                    var indexPathRow = IndexPath.init(row: i, section: 0)
-                    indexPathArray.append(indexPathRow)
-                    self.tableView.reloadRows(at: indexPathArray, with: UITableView.RowAnimation.automatic)
-                } catch {
-                    print(error)
-                }
-            }
+            
         }
     }
     

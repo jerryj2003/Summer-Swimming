@@ -10,6 +10,7 @@
 		B8EF2D48661FF74C1EE94B44 /* Pods_MCSL_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */; };
 		C40FC8A22559AD3B00ED9FF3 /* light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C40FC8A02559AD3900ED9FF3 /* light@2x.png */; };
 		C40FC8A32559AD3B00ED9FF3 /* light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C40FC8A12559AD3B00ED9FF3 /* light@3x.png */; };
+		C42313AC2574172B0010D1C2 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42313AB2574172B0010D1C2 /* FavoritesView.swift */; };
 		C458F85124F2BE3B00732355 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458F85024F2BE3B00732355 /* SearchTableViewController.swift */; };
 		C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */; };
 		C46D192C24B547C4009A9AA7 /* Swimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192B24B547C4009A9AA7 /* Swimmer.swift */; };
@@ -44,6 +45,7 @@
 		B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCSL_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40FC8A02559AD3900ED9FF3 /* light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@2x.png"; sourceTree = "<group>"; };
 		C40FC8A12559AD3B00ED9FF3 /* light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@3x.png"; sourceTree = "<group>"; };
+		C42313AB2574172B0010D1C2 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		C458F85024F2BE3B00732355 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
 		C46D192B24B547C4009A9AA7 /* Swimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swimmer.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				C4E32407243A58730097C007 /* SceneDelegate.swift */,
 				C4E3240D243A58730097C007 /* Main.storyboard */,
 				C4F26D2F2558770000D195EB /* FavoritesTableViewController.swift */,
+				C42313AB2574172B0010D1C2 /* FavoritesView.swift */,
 				C4F26D322558776500D195EB /* FavoritesManager.swift */,
 				C458F85024F2BE3B00732355 /* SearchTableViewController.swift */,
 				C4F3242D24E98CD400AF8CF5 /* IconsTableViewController.swift */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42313AC2574172B0010D1C2 /* FavoritesView.swift in Sources */,
 				C4F3242E24E98CD400AF8CF5 /* IconsTableViewController.swift in Sources */,
 				C4F26D332558776500D195EB /* FavoritesManager.swift in Sources */,
 				C4E32406243A58730097C007 /* AppDelegate.swift in Sources */,
