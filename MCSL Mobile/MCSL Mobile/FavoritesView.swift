@@ -13,11 +13,28 @@ struct FavoritesView: View {
     var manager = FavoritesManager.shared
     var list: some View {
         List(manager.favoriteIDs, id:\.self){ id in
-            if let swimmer = manager.swimmer(for: id) {
-                Text(swimmer.name)
-            } else {
-                Text("Loading...")
-                
+            HStack{
+                Button(action: {manager.invert(ID: id)}) {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.orange)
+                }
+                VStack(alignment:.leading){
+                    if let swimmer = manager.swimmer(for: id) {
+                        Text(swimmer.name)
+                    } else {
+                        Text("Loading...")
+                    }
+                    
+                    if let swimmer = manager.swimmer(for: id) {
+                        Text("\(swimmer.team) | \(swimmer.age)")
+                            .font(.caption)
+                    } else {
+                        Text("")
+                            .font(.caption)
+                        
+                    }
+                    
+                }
             }
         }
     }

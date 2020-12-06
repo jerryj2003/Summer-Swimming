@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B8EF2D48661FF74C1EE94B44 /* Pods_MCSL_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */; };
-		C40FC8A22559AD3B00ED9FF3 /* light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C40FC8A02559AD3900ED9FF3 /* light@2x.png */; };
-		C40FC8A32559AD3B00ED9FF3 /* light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C40FC8A12559AD3B00ED9FF3 /* light@3x.png */; };
 		C42313AC2574172B0010D1C2 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42313AB2574172B0010D1C2 /* FavoritesView.swift */; };
+		C42313B0257474370010D1C2 /* light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C42313AF257474370010D1C2 /* light@2x.png */; };
+		C42313B32574743E0010D1C2 /* light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C42313B22574743E0010D1C2 /* light@3x.png */; };
 		C458F85124F2BE3B00732355 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458F85024F2BE3B00732355 /* SearchTableViewController.swift */; };
 		C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */; };
 		C46D192C24B547C4009A9AA7 /* Swimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192B24B547C4009A9AA7 /* Swimmer.swift */; };
@@ -43,9 +43,9 @@
 		22FF5EDB6AB563EDB84BB568 /* Pods-MCSL Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.debug.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.release.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		B7E9FBCFA70442E8A30B9455 /* Pods_MCSL_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCSL_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C40FC8A02559AD3900ED9FF3 /* light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@2x.png"; sourceTree = "<group>"; };
-		C40FC8A12559AD3B00ED9FF3 /* light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@3x.png"; sourceTree = "<group>"; };
 		C42313AB2574172B0010D1C2 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		C42313AF257474370010D1C2 /* light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@2x.png"; sourceTree = "<group>"; };
+		C42313B22574743E0010D1C2 /* light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@3x.png"; sourceTree = "<group>"; };
 		C458F85024F2BE3B00732355 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
 		C46D192B24B547C4009A9AA7 /* Swimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swimmer.swift; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 				C4F3244424EA154300AF8CF5 /* midnight@3x.png */,
 				C497F6C4254F2B6800B8951A /* dark@2x.png */,
 				C497F6C7254F2B6E00B8951A /* dark@3x.png */,
-				C40FC8A02559AD3900ED9FF3 /* light@2x.png */,
-				C40FC8A12559AD3B00ED9FF3 /* light@3x.png */,
+				C42313AF257474370010D1C2 /* light@2x.png */,
+				C42313B22574743E0010D1C2 /* light@3x.png */,
 				C4E32412243A587C0097C007 /* LaunchScreen.storyboard */,
 				C4E32415243A587C0097C007 /* Info.plist */,
 				C47603EF244CD18800A26EB9 /* GoogleService-Info.plist */,
@@ -222,7 +222,7 @@
 			files = (
 				C4F3243A24EA120E00AF8CF5 /* galaxy@2x.png in Resources */,
 				C497F6C5254F2B6800B8951A /* dark@2x.png in Resources */,
-				C40FC8A32559AD3B00ED9FF3 /* light@3x.png in Resources */,
+				C42313B32574743E0010D1C2 /* light@3x.png in Resources */,
 				C4E32414243A587C0097C007 /* LaunchScreen.storyboard in Resources */,
 				C4F3243924EA120E00AF8CF5 /* galaxy@3x.png in Resources */,
 				C4F3243524EA0E8B00AF8CF5 /* classic@3x.png in Resources */,
@@ -237,7 +237,7 @@
 				C4F3244524EA154300AF8CF5 /* midnight@2x.png in Resources */,
 				C4F3243624EA0E8B00AF8CF5 /* classic@2x.png in Resources */,
 				C4F3243E24EA130200AF8CF5 /* beach@3x.png in Resources */,
-				C40FC8A22559AD3B00ED9FF3 /* light@2x.png in Resources */,
+				C42313B0257474370010D1C2 /* light@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
