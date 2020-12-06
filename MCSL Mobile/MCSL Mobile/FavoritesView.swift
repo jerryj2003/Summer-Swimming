@@ -13,41 +13,49 @@ struct FavoritesView: View {
     var manager = FavoritesManager.shared
     var list: some View {
         List(manager.favoriteIDs, id:\.self){ id in
-            HStack{
-                Button(action: {manager.invert(ID: id)}) {
+            NavigationLink(destination: MemberView(id:id, name: manager.swimmer(for: id)?.name ?? "")) {
+                HStack{
                     Image(systemName: "star.fill")
-                        .foregroundColor(.orange)
-                }
-                VStack(alignment:.leading){
-                    if let swimmer = manager.swimmer(for: id) {
-                        Text(swimmer.name)
-                    } else {
-                        Text("Loading...")
-                    }
-                    
-                    if let swimmer = manager.swimmer(for: id) {
-                        Text("\(swimmer.team) | \(swimmer.age)")
-                            .font(.caption)
-                    } else {
-                        Text("")
-                            .font(.caption)
+                        .foregroundColor(.accentColor)
+                        .onTapGesture {
+                            manager.invert(ID: id)
+                        } 
+                    VStack(alignment:.leading){
+                        if let swimmer = manager.swimmer(for: id) {
+                            Text(swimmer.name)
+                        } else {
+                            Text("Loading...")
+                        }
+                        
+                        if let swimmer = manager.swimmer(for: id) {
+                            Text("\(swimmer.team) | \(swimmer.age)")
+                                .font(.caption)
+                        } else {
+                            Text("")
+                                .font(.caption)
+                            
+                        }
                         
                     }
-                    
                 }
             }
         }
+        .animation(.easeOut)
     }
     var body: some View {
-        if #available(iOS 14.0, *) {
-            list
-                .listStyle(InsetGroupedListStyle())
-        } else {
-            // Fallback on earlier versions
-            list
-                .listStyle(GroupedListStyle())
+        NavigationView {
+            if #available(iOS 14.0, *) {
+                list
+                    .listStyle(InsetGroupedListStyle())
+                    .navigationTitle("Favorites")
+            } else {
+                // Fallback on earlier versions
+                list
+                    .listStyle(GroupedListStyle())
+                    .navigationBarTitle("Favorites")
+            }
         }
-        
+        .accentColor(.init("Theme1"))
     }
 }
 

@@ -538,7 +538,7 @@
         <!--Member Table View Controller-->
         <scene sceneID="Vfm-9L-gjR">
             <objects>
-                <tableViewController id="8Fa-aq-2WX" customClass="MemberTableViewController" customModule="MCSL_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MemberTableViewController" id="8Fa-aq-2WX" customClass="MemberTableViewController" customModule="MCSL_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="iMx-Ho-ttj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

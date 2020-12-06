@@ -19,6 +19,7 @@
 		C497F6C8254F2B6E00B8951A /* dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C497F6C7254F2B6E00B8951A /* dark@3x.png */; };
 		C4A3F06F24998BD100BA5ABF /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */; };
 		C4B736DB245F59C400ECFF4D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */; };
+		C4E05E3C257D5BC3005F571A /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E05E3B257D5BC2005F571A /* MemberView.swift */; };
 		C4E32406243A58730097C007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32405243A58730097C007 /* AppDelegate.swift */; };
 		C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32407243A58730097C007 /* SceneDelegate.swift */; };
 		C4E3240F243A58730097C007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E3240D243A58730097C007 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		C497F6C7254F2B6E00B8951A /* dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark@3x.png"; sourceTree = "<group>"; };
 		C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		C4E05E3B257D5BC2005F571A /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
 		C4E32402243A58730097C007 /* MCSL Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MCSL Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E32405243A58730097C007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E32407243A58730097C007 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				C4E3240D243A58730097C007 /* Main.storyboard */,
 				C4F26D2F2558770000D195EB /* FavoritesTableViewController.swift */,
 				C42313AB2574172B0010D1C2 /* FavoritesView.swift */,
+				C4E05E3B257D5BC2005F571A /* MemberView.swift */,
 				C4F26D322558776500D195EB /* FavoritesManager.swift */,
 				C458F85024F2BE3B00732355 /* SearchTableViewController.swift */,
 				C4F3242D24E98CD400AF8CF5 /* IconsTableViewController.swift */,
@@ -296,6 +299,7 @@
 				C4E32406243A58730097C007 /* AppDelegate.swift in Sources */,
 				C46D192C24B547C4009A9AA7 /* Swimmer.swift in Sources */,
 				C4F26D302558770000D195EB /* FavoritesTableViewController.swift in Sources */,
+				C4E05E3C257D5BC3005F571A /* MemberView.swift in Sources */,
 				C4A3F06F24998BD100BA5ABF /* TeamTableViewController.swift in Sources */,
 				C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */,
 				C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */,
