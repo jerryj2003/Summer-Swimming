@@ -15,10 +15,8 @@ struct MemberView : View {
     
     let id : String
     let name : String
-    var body: some View{
+    var list: some View{
         MemberUIView(id:id)
-            .navigationBarTitle(name)
-            .edgesIgnoringSafeArea(.all)
             .navigationBarItems(trailing: Button(action: {manager.invert(ID: id)}) {
                 if manager.checkFavorites(ID: id){
                     Image.init(systemName: "star.fill")
@@ -27,6 +25,22 @@ struct MemberView : View {
                     
                 }
             })
+    }
+   
+    var body: some View {
+        NavigationView {
+            if #available(iOS 14.0, *) {
+                list
+                    .navigationTitle(name)
+                    .ignoresSafeArea(.all)
+            } else {
+                // Fallback on earlier versions
+                list
+                    .navigationBarTitle(name)
+                    .edgesIgnoringSafeArea(.all)
+            }
+        }
+        .accentColor(.init("Theme1"))
     }
 }
 
