@@ -15,8 +15,9 @@ class TeamTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let selectedMember = tableView.indexPathsForSelectedRows{
-            tableView.reloadRows(at: selectedMember, with: UITableView.RowAnimation.automatic)
+//        if let selectedMember = tableView.indexPathsForSelectedRows{
+        if let allRows = tableView.indexPathsForVisibleRows{
+            tableView.reloadRows(at: allRows, with: UITableView.RowAnimation.automatic)
         }
     }
     

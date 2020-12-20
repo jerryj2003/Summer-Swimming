@@ -18,19 +18,25 @@ class MemberTableViewController: UITableViewController {
     
     @IBAction func toggleStar(_ sender: UIBarButtonItem) {
         FavoritesManager.shared.invert(ID: id!)
-        fillStarButton()
+        updateStarButton()
     }
     
-    func fillStarButton(){
+    func updateStarButton(){
         starButton.image = FavoritesManager.shared.fill(ID: id!)
     }
     
     @IBAction func segmentChange(_ sender: UISegmentedControl) {
         self.tableView.reloadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateStarButton()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillStarButton()
+        updateStarButton()
         ref.child("persons").child(id!).observe(.value) {(snapshot) in
             guard let value = snapshot.value else { return }
             do {

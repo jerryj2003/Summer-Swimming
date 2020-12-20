@@ -15,7 +15,6 @@ struct MemberView : View {
     
     let id : String
     let name : String
-//    var x : CGFloat = 24
     var info: some View{
         MemberUIView(id:id)
             .navigationBarItems(trailing: Button(action: {manager.invert(ID: id)}) {
@@ -23,11 +22,9 @@ struct MemberView : View {
                     if manager.checkFavorites(ID: id){
                         Image.init(systemName: "star.fill")
                             .imageScale(.large)
-//                            .resizable().frame(width: x, height: x)
                     } else {
                         Image.init(systemName: "star")
                             .imageScale(.large)
-//                            .resizable().frame(width: x, height: x)
                     }
                 }
                 .font(Font.body.weight(.regular))
