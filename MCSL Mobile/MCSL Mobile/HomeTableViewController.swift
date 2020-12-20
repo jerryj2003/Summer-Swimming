@@ -103,6 +103,8 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if isSearching{
+            //Dismisses the keyboard when navigating to next page
+            searchController.searchBar.searchTextField.resignFirstResponder()
             return searchTableViewController.prepare(for: segue, sender: sender)
         }
         let cell = sender as! UITableViewCell

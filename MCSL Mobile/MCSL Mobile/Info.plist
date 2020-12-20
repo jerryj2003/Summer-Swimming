@@ -10,11 +10,11 @@
 	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>light</key>
+			<key>beach</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>light</string>
+					<string>beach</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -28,20 +28,20 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>beach</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>beach</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>galaxy</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>galaxy</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>light</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>light</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
