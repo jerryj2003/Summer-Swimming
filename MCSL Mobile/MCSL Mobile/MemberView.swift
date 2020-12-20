@@ -15,7 +15,7 @@ struct MemberView : View {
     
     let id : String
     let name : String
-    var list: some View{
+    var info: some View{
         MemberUIView(id:id)
             .navigationBarItems(trailing: Button(action: {manager.invert(ID: id)}) {
                 if manager.checkFavorites(ID: id){
@@ -28,19 +28,16 @@ struct MemberView : View {
     }
    
     var body: some View {
-        NavigationView {
             if #available(iOS 14.0, *) {
-                list
+                info
                     .navigationTitle(name)
                     .ignoresSafeArea(.all)
             } else {
                 // Fallback on earlier versions
-                list
+                info
                     .navigationBarTitle(name)
                     .edgesIgnoringSafeArea(.all)
             }
-        }
-        .accentColor(.init("Theme1"))
     }
 }
 
@@ -64,5 +61,6 @@ struct MemberView_Previews: PreviewProvider {
             MemberView(id:"e70438eb7f13cfdb981e59eee47435af8824d9012610b6aacf4414b4",
                        name: "whatever")
         }
+        .accentColor(.init("Theme1"))
     }
 }

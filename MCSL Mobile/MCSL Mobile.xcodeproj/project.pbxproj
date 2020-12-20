@@ -18,6 +18,7 @@
 		C497F6C5254F2B6800B8951A /* dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C497F6C4254F2B6800B8951A /* dark@2x.png */; };
 		C497F6C8254F2B6E00B8951A /* dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C497F6C7254F2B6E00B8951A /* dark@3x.png */; };
 		C4A3F06F24998BD100BA5ABF /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */; };
+		C4AF549A25868AD7005A6020 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AF549925868AD7005A6020 /* FavoritesViewController.swift */; };
 		C4B736DB245F59C400ECFF4D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */; };
 		C4E05E3C257D5BC3005F571A /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E05E3B257D5BC2005F571A /* MemberView.swift */; };
 		C4E32406243A58730097C007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E32405243A58730097C007 /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 		C497F6C4254F2B6800B8951A /* dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark@2x.png"; sourceTree = "<group>"; };
 		C497F6C7254F2B6E00B8951A /* dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark@3x.png"; sourceTree = "<group>"; };
 		C4A3F06E24998BD100BA5ABF /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		C4AF549925868AD7005A6020 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		C4E05E3B257D5BC2005F571A /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
 		C4E32402243A58730097C007 /* MCSL Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MCSL Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				C4E32405243A58730097C007 /* AppDelegate.swift */,
 				C4E32407243A58730097C007 /* SceneDelegate.swift */,
 				C4E3240D243A58730097C007 /* Main.storyboard */,
+				C4AF549925868AD7005A6020 /* FavoritesViewController.swift */,
 				C4F26D2F2558770000D195EB /* FavoritesTableViewController.swift */,
 				C42313AB2574172B0010D1C2 /* FavoritesView.swift */,
 				C4E05E3B257D5BC2005F571A /* MemberView.swift */,
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AF549A25868AD7005A6020 /* FavoritesViewController.swift in Sources */,
 				C42313AC2574172B0010D1C2 /* FavoritesView.swift in Sources */,
 				C4F3242E24E98CD400AF8CF5 /* IconsTableViewController.swift in Sources */,
 				C4F26D332558776500D195EB /* FavoritesManager.swift in Sources */,
