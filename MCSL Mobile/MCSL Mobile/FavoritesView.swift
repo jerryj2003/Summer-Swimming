@@ -79,7 +79,7 @@ struct FavoritesView: View {
         NavigationView {
             if #available(iOS 14.0, *) {
                 ZStack{
-                    Color.init(.secondarySystemBackground)
+                    Color.init(.systemGroupedBackground)
                         .ignoresSafeArea()
                     list
                         .listStyle(InsetGroupedListStyle())
@@ -88,7 +88,7 @@ struct FavoritesView: View {
             } else {
                 // Fallback on earlier versions
                 ZStack{
-                    Color.init(.secondarySystemBackground)
+                    Color.init(.systemGroupedBackground)
                         .edgesIgnoringSafeArea(.all)
                     list
                         .listStyle(GroupedListStyle())
