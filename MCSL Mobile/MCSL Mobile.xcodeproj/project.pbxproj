@@ -11,6 +11,8 @@
 		C42313AC2574172B0010D1C2 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42313AB2574172B0010D1C2 /* FavoritesView.swift */; };
 		C42313B0257474370010D1C2 /* light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C42313AF257474370010D1C2 /* light@2x.png */; };
 		C42313B32574743E0010D1C2 /* light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C42313B22574743E0010D1C2 /* light@3x.png */; };
+		C452BCBA259A738600DDB495 /* MCSL_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452BCB9259A738600DDB495 /* MCSL_MobileUITests.swift */; };
+		C452BCDD259A850100DDB495 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452BCDC259A850100DDB495 /* SnapshotHelper.swift */; };
 		C458F85124F2BE3B00732355 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458F85024F2BE3B00732355 /* SearchTableViewController.swift */; };
 		C46D192A24B5216F009A9AA7 /* MemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */; };
 		C46D192C24B547C4009A9AA7 /* Swimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D192B24B547C4009A9AA7 /* Swimmer.swift */; };
@@ -40,6 +42,16 @@
 		C4F3244624EA154300AF8CF5 /* midnight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F3244424EA154300AF8CF5 /* midnight@3x.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C452BCBC259A738700DDB495 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E323FA243A58730097C007 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4E32401243A58730097C007;
+			remoteInfo = "MCSL Mobile";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		22FF5EDB6AB563EDB84BB568 /* Pods-MCSL Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.debug.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B6F0285F8856D87C5938EF /* Pods-MCSL Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCSL Mobile.release.xcconfig"; path = "Target Support Files/Pods-MCSL Mobile/Pods-MCSL Mobile.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +59,10 @@
 		C42313AB2574172B0010D1C2 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		C42313AF257474370010D1C2 /* light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@2x.png"; sourceTree = "<group>"; };
 		C42313B22574743E0010D1C2 /* light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@3x.png"; sourceTree = "<group>"; };
+		C452BCB7259A738600DDB495 /* MCSL MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MCSL MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C452BCB9259A738600DDB495 /* MCSL_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSL_MobileUITests.swift; sourceTree = "<group>"; };
+		C452BCBB259A738600DDB495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C452BCDC259A850100DDB495 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		C458F85024F2BE3B00732355 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		C46D192924B5216F009A9AA7 /* MemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewController.swift; sourceTree = "<group>"; };
 		C46D192B24B547C4009A9AA7 /* Swimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swimmer.swift; sourceTree = "<group>"; };
@@ -79,6 +95,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C452BCB4259A738600DDB495 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E323FF243A58730097C007 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,10 +130,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C452BCB8259A738600DDB495 /* MCSL MobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C452BCB9259A738600DDB495 /* MCSL_MobileUITests.swift */,
+				C452BCBB259A738600DDB495 /* Info.plist */,
+				C452BCDC259A850100DDB495 /* SnapshotHelper.swift */,
+			);
+			path = "MCSL MobileUITests";
+			sourceTree = "<group>";
+		};
 		C4E323F9243A58730097C007 = {
 			isa = PBXGroup;
 			children = (
 				C4E32404243A58730097C007 /* MCSL Mobile */,
+				C452BCB8259A738600DDB495 /* MCSL MobileUITests */,
 				C4E32403243A58730097C007 /* Products */,
 				BA0437AC42F287D52348F25F /* Pods */,
 				AB3C177626B13A75FF81AD7A /* Frameworks */,
@@ -121,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				C4E32402243A58730097C007 /* MCSL Mobile.app */,
+				C452BCB7259A738600DDB495 /* MCSL MobileUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +201,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C452BCB6259A738600DDB495 /* MCSL MobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C452BCC0259A738700DDB495 /* Build configuration list for PBXNativeTarget "MCSL MobileUITests" */;
+			buildPhases = (
+				C452BCB3259A738600DDB495 /* Sources */,
+				C452BCB4259A738600DDB495 /* Frameworks */,
+				C452BCB5259A738600DDB495 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C452BCBD259A738700DDB495 /* PBXTargetDependency */,
+			);
+			name = "MCSL MobileUITests";
+			productName = "MCSL MobileUITests";
+			productReference = C452BCB7259A738600DDB495 /* MCSL MobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C4E32401243A58730097C007 /* MCSL Mobile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E32418243A587C0097C007 /* Build configuration list for PBXNativeTarget "MCSL Mobile" */;
@@ -191,10 +244,14 @@
 		C4E323FA243A58730097C007 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Jerry Ji";
 				TargetAttributes = {
+					C452BCB6259A738600DDB495 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = C4E32401243A58730097C007;
+					};
 					C4E32401243A58730097C007 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -214,11 +271,19 @@
 			projectRoot = "";
 			targets = (
 				C4E32401243A58730097C007 /* MCSL Mobile */,
+				C452BCB6259A738600DDB495 /* MCSL MobileUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C452BCB5259A738600DDB495 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E32400243A58730097C007 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +354,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C452BCB3259A738600DDB495 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C452BCBA259A738600DDB495 /* MCSL_MobileUITests.swift in Sources */,
+				C452BCDD259A850100DDB495 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E323FE243A58730097C007 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,6 +384,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C452BCBD259A738700DDB495 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4E32401243A58730097C007 /* MCSL Mobile */;
+			targetProxy = C452BCBC259A738700DDB495 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C4E3240D243A58730097C007 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -330,6 +412,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C452BCBE259A738700DDB495 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9LH3QR9J34;
+				INFOPLIST_FILE = "MCSL MobileUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.jerryj2003.MCSL-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MCSL Mobile";
+			};
+			name = Debug;
+		};
+		C452BCBF259A738700DDB495 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9LH3QR9J34;
+				INFOPLIST_FILE = "MCSL MobileUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.jerryj2003.MCSL-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MCSL Mobile";
+			};
+			name = Release;
+		};
 		C4E32416243A587C0097C007 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -450,7 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 9LH3QR9J34;
 				INFOPLIST_FILE = "MCSL Mobile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -471,7 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 9LH3QR9J34;
 				INFOPLIST_FILE = "MCSL Mobile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -489,6 +613,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C452BCC0259A738700DDB495 /* Build configuration list for PBXNativeTarget "MCSL MobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C452BCBE259A738700DDB495 /* Debug */,
+				C452BCBF259A738700DDB495 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4E323FD243A58730097C007 /* Build configuration list for PBXProject "MCSL Mobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
