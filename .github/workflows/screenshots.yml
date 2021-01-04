@@ -11,6 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Change directory
+      run: cd "MCSL Mobile"
     - name: Install pod
       run: pod install
     - name: Create missing simulator
