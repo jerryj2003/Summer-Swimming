@@ -32,6 +32,7 @@ class MCSL_MobileUITests: XCTestCase {
         snapshot("0Home")
         let mcslMobileNavigationBar = app.navigationBars["MCSL Mobile"]
         mcslMobileNavigationBar.searchFields["Search Swimmer"].tap()
+        sleep(5)
         app/*@START_MENU_TOKEN@*/.keys["J"]/*[[".keyboards.keys[\"J\"]",".keys[\"J\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app/*@START_MENU_TOKEN@*/.keys["o"]/*[[".keyboards.keys[\"o\"]",".keys[\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.keys["h"].tap()
@@ -41,6 +42,7 @@ class MCSL_MobileUITests: XCTestCase {
         mcslMobileNavigationBar.buttons["Cancel"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["BETHESDA"]/*[[".cells.staticTexts[\"BETHESDA\"]",".staticTexts[\"BETHESDA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        sleep(5)
         snapshot("2Team")
         app.navigationBars["BETHESDA"].buttons["Teams"].tap()
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["INVERNESS RECREATION CLUB"]/*[[".cells.staticTexts[\"INVERNESS RECREATION CLUB\"]",".staticTexts[\"INVERNESS RECREATION CLUB\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -49,6 +51,7 @@ class MCSL_MobileUITests: XCTestCase {
         if starButton.exists{
             starButton.tap()
         }
+        sleep(5)
         snapshot("3Team")
         tablesQuery.cells.containing(.staticText, identifier:"JiRui N Ji").element.tap()
         tablesQuery.buttons["Week 5"].tap()
@@ -56,14 +59,17 @@ class MCSL_MobileUITests: XCTestCase {
         tablesQuery.buttons["Week 3"].tap()
         tablesQuery.buttons["Week 2"].tap()
         tablesQuery.buttons["Week 1"].tap()
+        sleep(5)
         snapshot("4Member")
         let tabBar = app.tabBars["Tab Bar"]
         tabBar.buttons["Favorites"].tap()
+        sleep(5)
         sleep(5)
         snapshot("5Favorites")
         tabBar.buttons["Home"].tap()
         tabBar.buttons["Settings"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Alternate Icons"]/*[[".cells.staticTexts[\"Alternate Icons\"]",".staticTexts[\"Alternate Icons\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        sleep(5)
         snapshot("6Icons")
     }
 
