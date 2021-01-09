@@ -38,11 +38,14 @@ class MCSL_MobileUITests: XCTestCase {
         app.keys["h"].tap()
         app.keys["n"].tap()
         sleep(5)
+        while app.staticTexts["John A Craig"].isVisible == false{
+            sleep(15)
+        }
         snapshot("1Search")
         mcslMobileNavigationBar.buttons["Cancel"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["BETHESDA"]/*[[".cells.staticTexts[\"BETHESDA\"]",".staticTexts[\"BETHESDA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        sleep(5)
+        sleep(10)
         snapshot("2Team")
         app.navigationBars["BETHESDA"].buttons["Teams"].tap()
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["INVERNESS RECREATION CLUB"]/*[[".cells.staticTexts[\"INVERNESS RECREATION CLUB\"]",".staticTexts[\"INVERNESS RECREATION CLUB\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -51,7 +54,7 @@ class MCSL_MobileUITests: XCTestCase {
         if starButton.exists{
             starButton.tap()
         }
-        sleep(5)
+        sleep(10)
         snapshot("3Team")
         tablesQuery.cells.containing(.staticText, identifier:"JiRui N Ji").element.tap()
         tablesQuery.buttons["Week 5"].tap()
@@ -59,19 +62,27 @@ class MCSL_MobileUITests: XCTestCase {
         tablesQuery.buttons["Week 3"].tap()
         tablesQuery.buttons["Week 2"].tap()
         tablesQuery.buttons["Week 1"].tap()
-        sleep(5)
+        sleep(10)
         snapshot("4Member")
         let tabBar = app.tabBars["Tab Bar"]
         tabBar.buttons["Favorites"].tap()
-        sleep(5)
-        sleep(5)
+        sleep(10)
         snapshot("5Favorites")
         tabBar.buttons["Home"].tap()
         tabBar.buttons["Settings"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Alternate Icons"]/*[[".cells.staticTexts[\"Alternate Icons\"]",".staticTexts[\"Alternate Icons\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        sleep(5)
+        sleep(10)
         snapshot("6Icons")
     }
+    
+    func saveScreenshot(_ name: String) {
+            let screenshot = XCUIScreen.main.screenshot()
+            let attachment = XCTAttachment(screenshot: screenshot)
+            attachment.lifetime = .keepAlways
+            attachment.name = name
+            snapshot(name)
+            add(attachment)
+        }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
