@@ -28,8 +28,8 @@ class MCSL_MobileUITests: XCTestCase {
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
-        
-        snapshot("0Home")
+        sleep(25)
+        saveScreenshot("0Home")
         let mcslMobileNavigationBar = app.navigationBars["MCSL Mobile"]
         mcslMobileNavigationBar.searchFields["Search Swimmer"].tap()
         sleep(5)
@@ -41,12 +41,12 @@ class MCSL_MobileUITests: XCTestCase {
         while app.staticTexts["John A Craig"].isVisible == false{
             sleep(15)
         }
-        snapshot("1Search")
+        saveScreenshot("1Search")
         mcslMobileNavigationBar.buttons["Cancel"].tap()
         let tablesQuery = app.tables
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["BETHESDA"]/*[[".cells.staticTexts[\"BETHESDA\"]",".staticTexts[\"BETHESDA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         sleep(10)
-        snapshot("2Team")
+        saveScreenshot("2Team")
         app.navigationBars["BETHESDA"].buttons["Teams"].tap()
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["INVERNESS RECREATION CLUB"]/*[[".cells.staticTexts[\"INVERNESS RECREATION CLUB\"]",".staticTexts[\"INVERNESS RECREATION CLUB\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         tablesQuery.element.scrollToElement(tablesQuery.cells.containing(.staticText, identifier:"JiRui N Ji").element)
@@ -55,7 +55,7 @@ class MCSL_MobileUITests: XCTestCase {
             starButton.tap()
         }
         sleep(10)
-        snapshot("3Team")
+        saveScreenshot("3Team")
         tablesQuery.cells.containing(.staticText, identifier:"JiRui N Ji").element.tap()
         tablesQuery.buttons["Week 5"].tap()
         tablesQuery.buttons["Week 4"].tap()
@@ -63,16 +63,16 @@ class MCSL_MobileUITests: XCTestCase {
         tablesQuery.buttons["Week 2"].tap()
         tablesQuery.buttons["Week 1"].tap()
         sleep(10)
-        snapshot("4Member")
+        saveScreenshot("4Member")
         let tabBar = app.tabBars["Tab Bar"]
         tabBar.buttons["Favorites"].tap()
         sleep(10)
-        snapshot("5Favorites")
+        saveScreenshot("5Favorites")
         tabBar.buttons["Home"].tap()
         tabBar.buttons["Settings"].tap()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Alternate Icons"]/*[[".cells.staticTexts[\"Alternate Icons\"]",".staticTexts[\"Alternate Icons\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         sleep(10)
-        snapshot("6Icons")
+        saveScreenshot("6Icons")
     }
     
     func saveScreenshot(_ name: String) {
