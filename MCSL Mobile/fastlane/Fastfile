@@ -21,4 +21,23 @@ platform :ios do
     capture_screenshots(workspace: "MCSL Mobile.xcworkspace", scheme: "MCSL MobileUITests")
     upload_to_app_store(skip_binary_upload: true, skip_metadata: true, force: true, overwrite_screenshots: true)
   end
+  lane :beta do
+# Sets up fake keychain for fastlane
+    setup_ci
+# Adds certificate to fake keychain
+    sync_code_signing(type: "appstore", readonly: is_ci)
+# Uses the certificate from Match
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: "MCSL Mobile.xcodeproj",
+      profile_name: " match AppStore io.github.jerryj2003.MCSL-Mobile",
+      code_sign_identity: "iPhone Distribution"
+    )
+    increment_build_number(
+        build_number: latest_testflight_build_number + 1,
+        xcodeproj: "MCSL Mobile.xcodeproj"
+    )
+    build_app(scheme: "MCSL Mobile")
+    upload_to_testflight
+  end
 end
