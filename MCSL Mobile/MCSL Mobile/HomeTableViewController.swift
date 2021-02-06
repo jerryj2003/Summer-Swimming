@@ -20,8 +20,10 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
         return searchController.searchBar.text?.isEmpty == false
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchTableViewController.viewDidLoad()
         ref.child("divisions").observe(.value) {(snapshot) in
             let values = snapshot.value as? [

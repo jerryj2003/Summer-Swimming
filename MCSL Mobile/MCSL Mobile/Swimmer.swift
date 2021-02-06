@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 struct EventInfo: Codable {
     let event: String
     let seed: String?
