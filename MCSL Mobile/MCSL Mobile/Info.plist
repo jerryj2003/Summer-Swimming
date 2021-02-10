@@ -65,13 +65,6 @@
 				<false/>
 			</dict>
 		</dict>
-		<key>UINewsstandIcon</key>
-		<dict>
-			<key>UINewsstandBindingEdge</key>
-			<string>UINewsstandBindingEdgeLeft</string>
-			<key>UINewsstandBindingType</key>
-			<string>UINewsstandBindingTypeMagazine</string>
-		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>

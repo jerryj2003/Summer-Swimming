@@ -30,7 +30,7 @@ platform :ios do
     update_code_signing_settings(
       use_automatic_signing: false,
       path: "MCSL Mobile.xcodeproj",
-      profile_name: " match AppStore io.github.jerryj2003.MCSL-Mobile",
+      profile_name: "match AppStore io.github.jerryj2003.MCSL-Mobile",
       code_sign_identity: "iPhone Distribution"
     )
     increment_build_number(

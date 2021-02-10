@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    var years = ["2019","2018","2017","2016","2015"]
+    var years = ["2020","2019","2018","2017","2016","2015"]
     @State
     var yearIndex = UserDefaults.standard.integer(forKey: "yearIndex") {
         didSet{
