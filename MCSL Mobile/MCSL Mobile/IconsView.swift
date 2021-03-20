@@ -24,11 +24,14 @@ struct IconsView: View {
         List{
             ForEach(icons){ icon in
                 HStack{
-                    Image(icon.fileName)
+                    Image(uiImage: UIImage(named: icon.fileName)!)
                         .resizable()
                         .frame(width: 60, height: 60)
                         .cornerRadius(10)
                     Text(icon.displayName)
+                }
+                .onTapGesture {
+                    UIApplication.shared.setAlternateIconName(icon.identifierName)
                 }
             }
         }

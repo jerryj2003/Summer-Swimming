@@ -21,8 +21,6 @@ class IconsTableViewController: UITableViewController {
 //    let colors : [UIColor] = [UIColor.init(named: "Theme1")!, UIColor.systemRed, UIColor.systemTeal, UIColor.systemPink, UIColor.systemOrange]
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UIApplication.shared.setAlternateIconName(icons[indexPath.row])
-//        UITabBar.appearance().backgroundColor = colors[indexPath.row]
-//        UINavigationBar.appearance().backgroundColor = colors[indexPath.row]
     }
 
 }
