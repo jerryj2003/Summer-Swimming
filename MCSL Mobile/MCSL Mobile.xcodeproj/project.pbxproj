@@ -13,6 +13,7 @@
 		C42313B32574743E0010D1C2 /* light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C42313B22574743E0010D1C2 /* light@3x.png */; };
 		C42558E625BC81E900350C26 /* IconsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42558E525BC81E800350C26 /* IconsView.swift */; };
 		C42558EA25BC8C1900350C26 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42558E925BC8C1900350C26 /* Icon.swift */; };
+		C43030F1260A6C9800E9621E /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43030F0260A6C9800E9621E /* SettingsManager.swift */; };
 		C43A31FF2606513E00B91D75 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A31FE2606513E00B91D75 /* SettingsViewController.swift */; };
 		C43FA9EA25B8A38500304C2C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FA9E925B8A38500304C2C /* SettingsView.swift */; };
 		C452BCBA259A738600DDB495 /* MCSL_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452BCB9259A738600DDB495 /* MCSL_MobileUITests.swift */; };
@@ -66,6 +67,7 @@
 		C42313B22574743E0010D1C2 /* light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@3x.png"; sourceTree = "<group>"; };
 		C42558E525BC81E800350C26 /* IconsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsView.swift; sourceTree = "<group>"; };
 		C42558E925BC8C1900350C26 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		C43030F0260A6C9800E9621E /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		C43A31FE2606513E00B91D75 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C43FA9E925B8A38500304C2C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C452BCB7259A738600DDB495 /* MCSL MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MCSL MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 				C42558E525BC81E800350C26 /* IconsView.swift */,
 				C42558E925BC8C1900350C26 /* Icon.swift */,
 				C4F26D322558776500D195EB /* FavoritesManager.swift */,
+				C43030F0260A6C9800E9621E /* SettingsManager.swift */,
 				C458F85024F2BE3B00732355 /* SearchTableViewController.swift */,
 				C4F3242D24E98CD400AF8CF5 /* IconsTableViewController.swift */,
 				C4B736DA245F59C400ECFF4D /* HomeTableViewController.swift */,
@@ -390,6 +393,7 @@
 				C42558E625BC81E900350C26 /* IconsView.swift in Sources */,
 				C43A31FF2606513E00B91D75 /* SettingsViewController.swift in Sources */,
 				C46D192C24B547C4009A9AA7 /* Swimmer.swift in Sources */,
+				C43030F1260A6C9800E9621E /* SettingsManager.swift in Sources */,
 				C4E05E3C257D5BC3005F571A /* MemberView.swift in Sources */,
 				C4A3F06F24998BD100BA5ABF /* TeamTableViewController.swift in Sources */,
 				C4E32408243A58730097C007 /* SceneDelegate.swift in Sources */,

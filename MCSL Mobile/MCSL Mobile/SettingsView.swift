@@ -7,26 +7,25 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SettingsView: View {
     
-    var years = ["2020","2019","2018","2017","2016","2015"]
-    @State
-    var yearIndex = UserDefaults.standard.integer(forKey: "yearIndex") {
-        didSet{
-            UserDefaults.standard.set(yearIndex, forKey: "yearIndex")
-        }
-    }
+    @ObservedObject
+    var manager = SettingsManager.shared
     
     var content: some View {
         List{
             Section(header: Text("Year Selector")){
-                Picker(selection: $yearIndex, label: Text("Year Selector")) {
-                    ForEach(years, id: \.self){ year in
+                Picker(selection: $manager.selectedYear, label: Text("Year Selector")) {
+                    ForEach(manager.years, id:\.self){ year in
                         Text(year)
                     }
                 }
                 .pickerStyle(WheelPickerStyle())
+                .onReceive(Just(manager.selectedYear), perform: { yearIndex in
+                    manager.update()
+                })
             }
             Section(header: Text("miscellaneous")){
                 NavigationLink(
