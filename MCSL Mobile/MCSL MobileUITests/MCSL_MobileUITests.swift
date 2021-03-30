@@ -47,8 +47,9 @@ class MCSL_MobileUITests: XCTestCase {
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["BETHESDA"]/*[[".cells.staticTexts[\"BETHESDA\"]",".staticTexts[\"BETHESDA\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         sleep(10)
         saveScreenshot("2Team")
+        sleep(10)
         app.navigationBars["BETHESDA"].buttons["Teams"].tap()
-        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["INVERNESS RECREATION CLUB"]/*[[".cells.staticTexts[\"INVERNESS RECREATION CLUB\"]",".staticTexts[\"INVERNESS RECREATION CLUB\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+                        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["INVERNESS RECREATION CLUB"]/*[[".cells.staticTexts[\"INVERNESS RECREATION CLUB\"]",".staticTexts[\"INVERNESS RECREATION CLUB\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         tablesQuery.element.scrollToElement(tablesQuery.cells.containing(.staticText, identifier:"JiRui N Ji").element)
         let starButton = tablesQuery.cells.containing(.staticText, identifier:"JiRui N Ji").images["star"]
         if starButton.exists{
@@ -70,9 +71,10 @@ class MCSL_MobileUITests: XCTestCase {
         saveScreenshot("5Favorites")
         tabBar.buttons["Home"].tap()
         tabBar.buttons["Settings"].tap()
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Alternate Icons"]/*[[".cells.staticTexts[\"Alternate Icons\"]",".staticTexts[\"Alternate Icons\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        XCUIApplication().tables/*@START_MENU_TOKEN@*/.buttons["Alternative Icons"]/*[[".cells[\"Alternative Icons\"].buttons[\"Alternative Icons\"]",".buttons[\"Alternative Icons\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         sleep(10)
         saveScreenshot("6Icons")
+        
     }
     
     func saveScreenshot(_ name: String) {
