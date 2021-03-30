@@ -31,14 +31,14 @@ class TeamTableViewController: UITableViewController {
             for member in values.sorted(by: { (m1, m2) in
                 m1.value < m2.value
             }){
-                ref.child("persons").child(member.key).child("age").observeSingleEvent(of: .value) { (snapshot) in
+                ref.child(self.manager.selectedYear).child("persons").child(member.key).child("age").observeSingleEvent(of: .value) { (snapshot) in
                     let age = snapshot.value as? Int
                     self.members.append((name: member.value, age: age, id: member.key))
                     self.tableView.reloadData()
                 }
             }
         }
-        ref.child("teams").child(teamAbr!).child("full").observe(.value) { (snapshot) in
+        ref.child(manager.selectedYear).child("teams").child(teamAbr!).child("full").observe(.value) { (snapshot) in
             self.title = snapshot.value as? String
         }
     }

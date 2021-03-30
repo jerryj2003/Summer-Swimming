@@ -12,6 +12,8 @@ import CodableFirebase
 
 class FavoritesManager: ObservableObject {
     
+    var manager = SettingsManager.shared
+    
     typealias PersonID = String
     
     @Published
@@ -34,7 +36,7 @@ class FavoritesManager: ObservableObject {
             return nil
         }
         isLoading.insert(id)
-        ref.child("persons").child(id).observeSingleEvent(of: .value) {(snapshot) in
+        ref.child(manager.selectedYear).child("persons").child(id).observeSingleEvent(of: .value) {(snapshot) in
             defer{
                 self.isLoading.remove(id)
             }
