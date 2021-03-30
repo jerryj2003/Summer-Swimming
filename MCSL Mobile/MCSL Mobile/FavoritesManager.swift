@@ -12,8 +12,6 @@ import CodableFirebase
 
 class FavoritesManager: ObservableObject {
     
-    var manager = SettingsManager.shared
-    
     typealias PersonID = String
     
     @Published
@@ -28,7 +26,8 @@ class FavoritesManager: ObservableObject {
     @Published
     private var swimmers = [PersonID : SimpleSwimmer]()
     private var isLoading = Set<PersonID>()
-    func swimmer(for id: PersonID) -> SimpleSwimmer? {
+    
+    func swimmer(for id: PersonID, year: String) -> SimpleSwimmer? {
         if let swimmer = swimmers[id]{
             return swimmer
         }
@@ -36,7 +35,7 @@ class FavoritesManager: ObservableObject {
             return nil
         }
         isLoading.insert(id)
-        ref.child(manager.selectedYear).child("persons").child(id).observeSingleEvent(of: .value) {(snapshot) in
+        ref.child(year).child("persons").child(id).observeSingleEvent(of: .value) {(snapshot) in
             defer{
                 self.isLoading.remove(id)
             }

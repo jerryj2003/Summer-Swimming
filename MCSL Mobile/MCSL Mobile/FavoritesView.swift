@@ -10,6 +10,8 @@ import SwiftUI
 
 struct FavoritesView: View {
     @ObservedObject
+    var sManager = SettingsManager.shared
+    @ObservedObject
     var manager = FavoritesManager.shared
     @State
     var isStarFilled = true
@@ -19,7 +21,7 @@ struct FavoritesView: View {
     var nonEmptyList : some View{
         List{
             ForEach(manager.favoriteIDs, id:\.self){ id in
-                NavigationLink(destination: MemberView(id:id, name: manager.swimmer(for: id)?.name ?? "")) {
+                NavigationLink(destination: MemberView(id:id, name: manager.swimmer(for: id, year: sManager.selectedYear)?.name ?? "")) {
                     HStack{
                         if isStarFilled || id != unstarredID{
                             Image(systemName: "star.fill")
@@ -40,13 +42,13 @@ struct FavoritesView: View {
                             
                         }
                         VStack(alignment:.leading){
-                            if let swimmer = manager.swimmer(for: id) {
+                            if let swimmer = manager.swimmer(for: id, year: sManager.selectedYear) {
                                 Text(swimmer.name)
                             } else {
                                 Text("Loading...")
                             }
                             
-                            if let swimmer = manager.swimmer(for: id) {
+                            if let swimmer = manager.swimmer(for: id, year: sManager.selectedYear) {
                                 Text("\(swimmer.team) | \(swimmer.age)")
                                     .font(.caption)
                             } else {
