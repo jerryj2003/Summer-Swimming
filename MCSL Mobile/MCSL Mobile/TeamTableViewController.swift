@@ -10,6 +10,8 @@ import UIKit
 
 class TeamTableViewController: UITableViewController {
     
+    var manager = SettingsManager.shared
+    
     var members = [(name: String, age: Int?, id: String)]()
     var teamAbr : String?
     
@@ -23,7 +25,7 @@ class TeamTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref.child("teams").child(teamAbr!).child("members").observe(.value) {(snapshot) in
+        ref.child(manager.selectedYear).child("teams").child(teamAbr!).child("members").observe(.value) {(snapshot) in
             let values = snapshot.value as? [String: String] ?? [:]
             self.members.removeAll(keepingCapacity: true)
             for member in values.sorted(by: { (m1, m2) in

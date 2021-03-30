@@ -11,6 +11,8 @@ import CodableFirebase
 
 class MemberTableViewController: UITableViewController {
     
+    var manager = SettingsManager.shared
+    
     var swimmer : Swimmer?
     var id : String?
     @IBOutlet weak var weeks: UISegmentedControl!
@@ -37,7 +39,7 @@ class MemberTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateStarButton()
-        ref.child("persons").child(id!).observe(.value) {(snapshot) in
+        ref.child(manager.selectedYear).child("persons").child(id!).observe(.value) {(snapshot) in
             guard let value = snapshot.value else { return }
             do {
                 let model = try FirebaseDecoder().decode(Swimmer.self, from: value)

@@ -12,6 +12,8 @@ import DZNEmptyDataSet
 
 class SearchTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
+    var manager = SettingsManager.shared
+    
     init(tableView : UITableView) {
         self.searchTableView = tableView
     }
@@ -41,7 +43,7 @@ class SearchTableViewController: NSObject, UITableViewDataSource, UITableViewDel
             return
         }
         let searchTermCopy = searchTerm!
-        ref.child("persons").queryOrdered(byChild: "searchTerm").queryStarting(atValue: searchTerm?.lowercased()).queryEnding(atValue: searchTerm!.lowercased() + "\u{f8ff}").observeSingleEvent(of: .value) { (snapshot) in
+        ref.child(manager.selectedYear).child("persons").queryOrdered(byChild: "searchTerm").queryStarting(atValue: searchTerm?.lowercased()).queryEnding(atValue: searchTerm!.lowercased() + "\u{f8ff}").observeSingleEvent(of: .value) { (snapshot) in
             guard let value = snapshot.value else {
                 self.update(to: [], for: searchTermCopy)
                 return

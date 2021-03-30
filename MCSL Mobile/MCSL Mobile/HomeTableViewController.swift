@@ -11,6 +11,8 @@ import UIKit
 
 class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
 
+    var manager = SettingsManager.shared
+    
     var divisions = [String]()
     var teams = [[(teamFull: String, teamAbr: String)]]()
     lazy var searchTableViewController = SearchTableViewController(tableView: tableView)
@@ -25,7 +27,7 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
         super.viewDidLoad()
         
         searchTableViewController.viewDidLoad()
-        ref.child("divisions").observe(.value) {(snapshot) in
+        ref.child(manager.selectedYear).child("divisions").observe(.value) {(snapshot) in
             let values = snapshot.value as? [
                 String: [String: AnyObject]
             ] ?? [:]
