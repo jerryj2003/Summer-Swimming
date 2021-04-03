@@ -49,8 +49,13 @@ struct FavoritesView: View {
                             }
                             
                             if let swimmer = manager.swimmer(for: id, year: sManager.selectedYear) {
-                                Text("\(swimmer.team) | \(swimmer.age)")
-                                    .font(.caption)
+                                if swimmer.age != nil{
+                                    Text("\(swimmer.team) | \(swimmer.age!)")
+                                        .font(.caption)
+                                } else {
+                                    Text("")
+                                        .font(.caption)
+                                }
                             } else {
                                 Text("")
                                     .font(.caption)

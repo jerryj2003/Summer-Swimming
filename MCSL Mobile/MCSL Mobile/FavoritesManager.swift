@@ -14,11 +14,16 @@ class FavoritesManager: ObservableObject {
     
     typealias PersonID = String
     
+    var token : Any?
+    
     @Published
     private(set) var favoriteIDs : [PersonID] = []
     static let shared = FavoritesManager()
     
     private init() {
+        token = SettingsManager.shared.$selectedYear.sink { (year) in
+            self.swimmers.removeAll()
+        }
         let savedFavorites = UserDefaults.standard.array(forKey: "savedFavorites")
         favoriteIDs = savedFavorites as? [PersonID] ?? []
     }
@@ -44,7 +49,8 @@ class FavoritesManager: ObservableObject {
                 let member = try FirebaseDecoder().decode(SimpleSwimmer.self, from: value)
                 self.swimmers[id] = member
             } catch {
-                print(error)
+                let noData = SimpleSwimmer.init(name: "No Data Found", age:nil , team: "")
+                self.swimmers[id] = noData
             }
         }
         return nil

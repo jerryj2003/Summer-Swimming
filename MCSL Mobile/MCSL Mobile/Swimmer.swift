@@ -22,6 +22,6 @@ struct Swimmer: Codable {
 
 struct SimpleSwimmer : Codable{
     var name : String
-    var age : Int
+    var age : Int?
     var team : String
 }
