@@ -21,6 +21,7 @@ jobs:
       working-directory: "MCSL Mobile"
       run: fastlane screenshots
       env: 
+        FASTLANE_EXPLICIT_OPEN_SIMULATOR: "true"
         FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
         FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
 
