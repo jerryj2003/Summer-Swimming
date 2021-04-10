@@ -13,6 +13,10 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
 
     var manager = SettingsManager.shared
     
+    var token : Any?
+    
+    var currentYear = SettingsManager.shared.selectedYear
+    
     var divisions = [String]()
     var teams = [[(teamFull: String, teamAbr: String)]]()
     lazy var searchTableViewController = SearchTableViewController(tableView: tableView)
@@ -22,12 +26,10 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
         return searchController.searchBar.text?.isEmpty == false
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func updateFirebase() {
         
-        searchTableViewController.viewDidLoad()
-        ref.child(manager.selectedYear).child("divisions").observe(.value) {(snapshot) in
+        ref.child(manager.selectedYear).child("divisions").removeAllObservers()
+        ref.child(currentYear).child("divisions").observe(.value) {(snapshot) in
             let values = snapshot.value as? [
                 String: [String: AnyObject]
             ] ?? [:]
@@ -46,6 +48,20 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
             }
             self.tableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        searchTableViewController.viewDidLoad()
+        updateFirebase()
+        
+        token = manager.$selectedYear.sink { (year) in
+            self.navigationController?.popToRootViewController(animated: true)
+            self.currentYear = year
+            self.updateFirebase()
+        }
+        
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
         //Removes background during new search

@@ -49,7 +49,7 @@ class FavoritesManager: ObservableObject {
                 let member = try FirebaseDecoder().decode(SimpleSwimmer.self, from: value)
                 self.swimmers[id] = member
             } catch {
-                let noData = SimpleSwimmer.init(name: "No Data Found", age:nil , team: "")
+                let noData = SimpleSwimmer.init(name: "N/A", age:nil , team: "")
                 self.swimmers[id] = noData
             }
         }
