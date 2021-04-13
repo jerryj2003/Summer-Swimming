@@ -114,7 +114,11 @@ class SearchTableViewController: NSObject, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
         let info = searchResult[indexPath.row].swimmerInfo
         cell.textLabel?.text = info.name
-        cell.detailTextLabel?.text = "\(info.team) | \(info.age)"
+        if info.age == nil{
+            cell.detailTextLabel?.text = "\(info.team) | N/A"
+        } else {
+            cell.detailTextLabel?.text = "\(info.team) | \(info.age!)"
+        }
         return cell
     }
     
